@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - OrdersApp</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/OrdersApp.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid"><hЗ>Закази № 1</hЗ></div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="content pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="footer-fixed">
+        <div class="image-track">
+            <a asp-controller="Orders" asp-action="OrderFood">
+                <div class="image-card">
+                    <img src="~/image/tantuni.jpg" alt="Eды" />
+                    <p class="image-title">Еда</p>
+                </div>
+            </a>
+
+            <a asp-controller="Orders" asp-action="OrderDrink">
+                <div class="image-card">
+                    <img src="~/image/ccole.jpg" alt="Напитка" />
+                    <p class="image-title">Кола</p>
+                </div>
+            </a>
+
+            <a asp-controller="Orders" asp-action="OrderSalad">
+                <div class="image-card">
+                    <img src="~/image/salat1.jpg" alt="Салата" />
+                    <p class="image-title">Салат</p>
+                </div>
+            </a>
+
+            <div class="image-card">
+                <img src="~/image/xodog.jpg" alt="Хот-дог" />
+                <p class="image-title">Хот-дог</p>
+            </div>
+
+            <div class="image-card">
+                <img src="~/image/limonchoy.jpg" alt="Лимонный чай" />
+                <p class="image-title">Лимонный чай</p>
+            </div>
+
+            <div class="image-card">
+                <img src="~/image/choy.jpg" alt="Чай" />
+                <p class="image-title">Чай</p>
+            </div>
+
+            <div class="Cart image-card">
+                <img src="~/image/корзина.png" alt="Корзина" />
+                <p class="image-title">Корзина</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

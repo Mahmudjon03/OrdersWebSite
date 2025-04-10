@@ -1,0 +1,264 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\MyFinApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{08CE3671-0EE4-4237-87AA-6C63B03BEDDD}|OrdersApp\\OrdersApp.csproj|c:\\users\\user\\desktop\\myfinapp\\ordersapp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{08CE3671-0EE4-4237-87AA-6C63B03BEDDD}|OrdersApp\\OrdersApp.csproj|solutionrelative:ordersapp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08CE3671-0EE4-4237-87AA-6C63B03BEDDD}|OrdersApp\\OrdersApp.csproj|c:\\users\\user\\desktop\\myfinapp\\ordersapp\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{08CE3671-0EE4-4237-87AA-6C63B03BEDDD}|OrdersApp\\OrdersApp.csproj|solutionrelative:ordersapp\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08CE3671-0EE4-4237-87AA-6C63B03BEDDD}|OrdersApp\\OrdersApp.csproj|c:\\users\\user\\desktop\\myfinapp\\ordersapp\\views\\orders\\orderdrink.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{08CE3671-0EE4-4237-87AA-6C63B03BEDDD}|OrdersApp\\OrdersApp.csproj|solutionrelative:ordersapp\\views\\orders\\orderdrink.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08CE3671-0EE4-4237-87AA-6C63B03BEDDD}|OrdersApp\\OrdersApp.csproj|c:\\users\\user\\desktop\\myfinapp\\ordersapp\\views\\orders\\orderfood.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{08CE3671-0EE4-4237-87AA-6C63B03BEDDD}|OrdersApp\\OrdersApp.csproj|solutionrelative:ordersapp\\views\\orders\\orderfood.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08CE3671-0EE4-4237-87AA-6C63B03BEDDD}|OrdersApp\\OrdersApp.csproj|c:\\users\\user\\desktop\\myfinapp\\ordersapp\\views\\orders\\ordersalad.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{08CE3671-0EE4-4237-87AA-6C63B03BEDDD}|OrdersApp\\OrdersApp.csproj|solutionrelative:ordersapp\\views\\orders\\ordersalad.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08CE3671-0EE4-4237-87AA-6C63B03BEDDD}|OrdersApp\\OrdersApp.csproj|c:\\users\\user\\desktop\\myfinapp\\ordersapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{08CE3671-0EE4-4237-87AA-6C63B03BEDDD}|OrdersApp\\OrdersApp.csproj|solutionrelative:ordersapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08CE3671-0EE4-4237-87AA-6C63B03BEDDD}|OrdersApp\\OrdersApp.csproj|c:\\users\\user\\desktop\\myfinapp\\ordersapp\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{08CE3671-0EE4-4237-87AA-6C63B03BEDDD}|OrdersApp\\OrdersApp.csproj|solutionrelative:ordersapp\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08CE3671-0EE4-4237-87AA-6C63B03BEDDD}|OrdersApp\\OrdersApp.csproj|c:\\users\\user\\desktop\\myfinapp\\ordersapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{08CE3671-0EE4-4237-87AA-6C63B03BEDDD}|OrdersApp\\OrdersApp.csproj|solutionrelative:ordersapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08CE3671-0EE4-4237-87AA-6C63B03BEDDD}|OrdersApp\\OrdersApp.csproj|c:\\users\\user\\desktop\\myfinapp\\ordersapp\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{08CE3671-0EE4-4237-87AA-6C63B03BEDDD}|OrdersApp\\OrdersApp.csproj|solutionrelative:ordersapp\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08CE3671-0EE4-4237-87AA-6C63B03BEDDD}|OrdersApp\\OrdersApp.csproj|c:\\users\\user\\desktop\\myfinapp\\ordersapp\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{08CE3671-0EE4-4237-87AA-6C63B03BEDDD}|OrdersApp\\OrdersApp.csproj|solutionrelative:ordersapp\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08CE3671-0EE4-4237-87AA-6C63B03BEDDD}|OrdersApp\\OrdersApp.csproj|c:\\users\\user\\desktop\\myfinapp\\ordersapp\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{08CE3671-0EE4-4237-87AA-6C63B03BEDDD}|OrdersApp\\OrdersApp.csproj|solutionrelative:ordersapp\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08CE3671-0EE4-4237-87AA-6C63B03BEDDD}|OrdersApp\\OrdersApp.csproj|c:\\users\\user\\desktop\\myfinapp\\ordersapp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{08CE3671-0EE4-4237-87AA-6C63B03BEDDD}|OrdersApp\\OrdersApp.csproj|solutionrelative:ordersapp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08CE3671-0EE4-4237-87AA-6C63B03BEDDD}|OrdersApp\\OrdersApp.csproj|c:\\users\\user\\desktop\\myfinapp\\ordersapp\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{08CE3671-0EE4-4237-87AA-6C63B03BEDDD}|OrdersApp\\OrdersApp.csproj|solutionrelative:ordersapp\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\MyFinApp\\OrdersApp\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "OrdersApp\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\User\\Desktop\\MyFinApp\\OrdersApp\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "OrdersApp\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-07T10:12:35.319Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "OrderDrink.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\MyFinApp\\OrdersApp\\Views\\Orders\\OrderDrink.cshtml",
+              "RelativeDocumentMoniker": "OrdersApp\\Views\\Orders\\OrderDrink.cshtml",
+              "ToolTip": "C:\\Users\\User\\Desktop\\MyFinApp\\OrdersApp\\Views\\Orders\\OrderDrink.cshtml",
+              "RelativeToolTip": "OrdersApp\\Views\\Orders\\OrderDrink.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-07T10:47:46.728Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "OrderFood.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\MyFinApp\\OrdersApp\\Views\\Orders\\OrderFood.cshtml",
+              "RelativeDocumentMoniker": "OrdersApp\\Views\\Orders\\OrderFood.cshtml",
+              "ToolTip": "C:\\Users\\User\\Desktop\\MyFinApp\\OrdersApp\\Views\\Orders\\OrderFood.cshtml",
+              "RelativeToolTip": "OrdersApp\\Views\\Orders\\OrderFood.cshtml",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAC4AAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-07T10:47:09.933Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "OrdersController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\MyFinApp\\OrdersApp\\Controllers\\OrdersController.cs",
+              "RelativeDocumentMoniker": "OrdersApp\\Controllers\\OrdersController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\MyFinApp\\OrdersApp\\Controllers\\OrdersController.cs",
+              "RelativeToolTip": "OrdersApp\\Controllers\\OrdersController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T10:16:42.836Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\MyFinApp\\OrdersApp\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "OrdersApp\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\MyFinApp\\OrdersApp\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "OrdersApp\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T10:16:57.883Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\MyFinApp\\OrdersApp\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "OrdersApp\\wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\User\\Desktop\\MyFinApp\\OrdersApp\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "OrdersApp\\wwwroot\\css\\site.css",
+              "ViewState": "AgIAAG8AAAAAAAAAAAAAAIcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-04-07T10:08:38.467Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\MyFinApp\\OrdersApp\\Program.cs",
+              "RelativeDocumentMoniker": "OrdersApp\\Program.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\MyFinApp\\OrdersApp\\Program.cs",
+              "RelativeToolTip": "OrdersApp\\Program.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-06T16:04:32.127Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "OrderSalad.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\MyFinApp\\OrdersApp\\Views\\Orders\\OrderSalad.cshtml",
+              "RelativeDocumentMoniker": "OrdersApp\\Views\\Orders\\OrderSalad.cshtml",
+              "ToolTip": "C:\\Users\\User\\Desktop\\MyFinApp\\OrdersApp\\Views\\Orders\\OrderSalad.cshtml",
+              "RelativeToolTip": "OrdersApp\\Views\\Orders\\OrderSalad.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAB4AAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-07T10:48:06.953Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "site.js",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\MyFinApp\\OrdersApp\\wwwroot\\js\\site.js",
+              "RelativeDocumentMoniker": "OrdersApp\\wwwroot\\js\\site.js",
+              "ToolTip": "C:\\Users\\User\\Desktop\\MyFinApp\\OrdersApp\\wwwroot\\js\\site.js",
+              "RelativeToolTip": "OrdersApp\\wwwroot\\js\\site.js",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-04-07T10:08:57.671Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "bootstrap.css",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\MyFinApp\\OrdersApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+              "RelativeDocumentMoniker": "OrdersApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+              "ToolTip": "C:\\Users\\User\\Desktop\\MyFinApp\\OrdersApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+              "RelativeToolTip": "OrdersApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-04-07T10:09:08.289Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\MyFinApp\\OrdersApp\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "OrdersApp\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\User\\Desktop\\MyFinApp\\OrdersApp\\Properties\\launchSettings.json",
+              "RelativeToolTip": "OrdersApp\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-08T04:13:16.647Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\MyFinApp\\OrdersApp\\appsettings.json",
+              "RelativeDocumentMoniker": "OrdersApp\\appsettings.json",
+              "ToolTip": "C:\\Users\\User\\Desktop\\MyFinApp\\OrdersApp\\appsettings.json",
+              "RelativeToolTip": "OrdersApp\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-08T04:13:03.47Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\MyFinApp\\OrdersApp\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "OrdersApp\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\User\\Desktop\\MyFinApp\\OrdersApp\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "OrdersApp\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-07T10:08:27.279Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 217,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
