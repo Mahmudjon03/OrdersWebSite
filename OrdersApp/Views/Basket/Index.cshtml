@@ -1,0 +1,42 @@
+﻿@using Domain.Models
+@model List<CartItem>
+
+<h2>Корзина</h2>
+
+<form asp-action="CreateOrderDetails" method="post">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Фото</th>
+                <th>Название</th>
+                <th>Цена</th>
+                <th>Кол-во</th>
+                <th>Итог</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (int i = 0; i < Model.Count; i++)
+            {
+                <tr>
+                    <td>
+                        <img class="imagesCart" src="@($"http://127.0.0.1/android/php/photos/images/{Model[i].ProductName}{Model[i].ProductId}.png")" alt="foto" />
+                    </td>
+                    <td>
+                        <div>@Model[i].ProductName</div>
+                        <input type="hidden" name="[@i].ProductName" value="@Model[i].ProductName" />
+                        <input type="hidden" name="[@i].ProductId" value="@Model[i].ProductId" />
+                        <input type="hidden" name="[@i].Price" value="@Model[i].Price" />
+                    </td>
+                    <td>@Model[i].Price $</td>
+                    <td>
+                        @Model[i].Quantity
+                        <input type="hidden" name="[@i].Quantity" value="@Model[i].Quantity" />
+                    </td>
+                    <td>@(Model[i].Price * Model[i].Quantity) $</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <button type="submit" class="btn btn-primary">Оформить заказ</button>
+</form>

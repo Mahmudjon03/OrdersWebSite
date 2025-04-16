@@ -6,6 +6,8 @@ C:\Users\User\Desktop\MyFinApp\OrdersApp\bin\Debug\net8.0\OrdersApp.deps.json
 C:\Users\User\Desktop\MyFinApp\OrdersApp\bin\Debug\net8.0\OrdersApp.runtimeconfig.json
 C:\Users\User\Desktop\MyFinApp\OrdersApp\bin\Debug\net8.0\OrdersApp.dll
 C:\Users\User\Desktop\MyFinApp\OrdersApp\bin\Debug\net8.0\OrdersApp.pdb
+C:\Users\User\Desktop\MyFinApp\OrdersApp\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\User\Desktop\MyFinApp\OrdersApp\bin\Debug\net8.0\RestSharp.dll
 C:\Users\User\Desktop\MyFinApp\OrdersApp\bin\Debug\net8.0\Domain.dll
 C:\Users\User\Desktop\MyFinApp\OrdersApp\bin\Debug\net8.0\Infrastractructure.dll
 C:\Users\User\Desktop\MyFinApp\OrdersApp\bin\Debug\net8.0\Infrastractructure.pdb
@@ -18,6 +20,7 @@ C:\Users\User\Desktop\MyFinApp\OrdersApp\obj\Debug\net8.0\OrdersApp.csproj.CoreC
 C:\Users\User\Desktop\MyFinApp\OrdersApp\obj\Debug\net8.0\OrdersApp.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\User\Desktop\MyFinApp\OrdersApp\obj\Debug\net8.0\OrdersApp.RazorAssemblyInfo.cache
 C:\Users\User\Desktop\MyFinApp\OrdersApp\obj\Debug\net8.0\OrdersApp.RazorAssemblyInfo.cs
+C:\Users\User\Desktop\MyFinApp\OrdersApp\obj\Debug\net8.0\OrdersApp.sourcelink.json
 C:\Users\User\Desktop\MyFinApp\OrdersApp\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\User\Desktop\MyFinApp\OrdersApp\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\User\Desktop\MyFinApp\OrdersApp\obj\Debug\net8.0\staticwebassets\msbuild.OrdersApp.Microsoft.AspNetCore.StaticWebAssets.props

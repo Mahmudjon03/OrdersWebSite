@@ -1,118 +1,49 @@
-﻿@*
+﻿@using Domain.Models
+@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
-@{
-}
+@model List<Food>
 <div class="container mt-5">
     <div class="row">
+        @foreach (var food in Model)
+        {
+            <div class="col-6 col-md-4 mb-4 food-info">
+                <img class="images" src="@Url.Content(food.ImagePath)" alt="@food.Name"
+                     style="cursor:pointer"
+                     data-bs-toggle="modal" data-bs-target="#tantuniModal.@food.Id" />
+                <h4 class="texts">@food.Name</h4>
+                <h5 class="texts">@food.Price $</h5>
+                <div style="display:flex">
 
-        <div class="col-6 col-md-4 mb-4 food-info">
-            <img class="images" src="~/image/ccole.jpg" alt="Coca-Cola" />
-            <h4 class="texts">Coca-Cola</h4>
-            <div style="display:flex">
-                <button class="knopka">-</button>
-                <button class="knopka">+</button>
+                    <button type="button" class="btn btn-success">На Корзину</button>
+                </div>
             </div>
-        </div>
+            //modelskiy
+            <div class="modal fade" id="tantuniModal.@food.Id" tabindex="-1" aria-labelledby="tantuniModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="tantuniModalLabel">Тантуни</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                        </div>
+                        <div class="modal-body text-center">
 
-        <div class="col-6 col-md-4 mb-4 food-info">
-            <img class="images" src="~/image/fanta.jpg" alt="Fanta" />
-            <h4 class="texts">Fanta</h4>
-            <div style="display:flex;">
-                <button class="knopka">-</button>
-                <button class="knopka">+</button>
+                            <img src="@Url.Content(food.ImagePath)" alt="Tantuni" class="img-fluid rounded mb-2 w-75 h-75" style="max-height: 300px;" />
+
+
+                            <p>@food.Description</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
 
-        <div class="col-6 col-md-4 mb-4 food-info">
-            <img class="images" src="~/image/rs.jpg" alt="Red Smoke" />
-            <h4 class="texts">Red Smoke</h4>
-            <div style="display:flex;">
-                <button class="knopka">-</button>
-                <button class="knopka">+</button>
-            </div>
-        </div>
-
-        <div class="col-6 col-md-4 mb-4 food-info">
-            <img class="images" src="~/image/choy.jpg" alt="Чёрный чай" />
-            <h4 class="texts">Чёрный чай</h4>
-            <div style="display:flex;">
-                <button class="knopka">-</button>
-                <button class="knopka">+</button>
-            </div>
-        </div>
-
-        <div class="col-6 col-md-4 mb-4 food-info">
-            <img class="images" src="~/image/limonchoy.jpg" alt="Лимонный чай" />
-            <h4 class="texts">Лимонный чай</h4>
-            <div style="display:flex;">
-                <button class="knopka">-</button>
-                <button class="knopka">+</button>
-            </div>
-        </div>
-
-        <div class="col-6 col-md-4 mb-4 food-info">
-            <img class="images" src="~/image/ccole.jpg" alt="Coca-Cola" />
-            <h4 class="texts">Coca-Cola</h4>
-            <div style="display:flex;">
-                <button class="knopka">-</button>
-                <button class="knopka">+</button>
-            </div>
-        </div>
-
-        <div class="col-6 col-md-4 mb-4 food-info">
-            <img class="images" src="~/image/choy.jpg" alt="Чёрный чай" />
-            <h4 class="texts">Чёрный чай</h4>
-            <div style="display:flex;">
-                <button class="knopka">-</button>
-                <button class="knopka">+</button>
-            </div>
-        </div>
-
-        <div class="col-6 col-md-4 mb-4 food-info">
-            <img class="images" src="~/image/limonchoy.jpg" alt="Лимонный чай" />
-            <h4 class="texts">Лимонный чай</h4>
-            <div style="display:flex;">
-                <button class="knopka">-</button>
-                <button class="knopka">+</button>
-            </div>
-        </div>
-
-        <div class="col-6 col-md-4 mb-4 food-info">
-            <img class="images" src="~/image/fanta.jpg" alt="Fanta" />
-            <h4 class="texts">Fanta</h4>
-            <div style="display:flex;">
-                <button class="knopka">-</button>
-                <button class="knopka">+</button>
-            </div>
-        </div>
-
-        <div class="col-6 col-md-4 mb-4 food-info">
-            <img class="images" src="~/image/free.jpg" alt="Free Tea" />
-            <h4 class="texts">Free Tea</h4>
-            <div style="display:flex;">
-                <button class="knopka">-</button>
-                <button class="knopka">+</button>
-            </div>
-        </div>
-
-        <div class="col-6 col-md-4 mb-4 food-info">
-            <img class="images" src="~/image/tantuni2.jpg" alt="Тантуни" />
-            <h4 class="texts">Тантуни</h4>
-            <div style="display:flex;">
-                <button class="knopka">-</button>
-                <button class="knopka">+</button>
-            </div>
-        </div>
-
-        <div class="col-6 col-md-4 mb-4 food-info">
-            <img class="images" src="~/image/shurma2.jpg" alt="Шаурма" />
-            <h4 class="texts">Шаурма</h4>
-            <div style="display:flex;">
-                <button class="knopka">-</button>
-                <button class="knopka">+</button>
-            </div>
-        </div>
-
+        }
     </div>
 </div>
+
+
+
+

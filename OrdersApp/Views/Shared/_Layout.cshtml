@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using Domain.Models
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -10,11 +11,41 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
 </head>
+@{
+    var currentTable = Context.Session.GetInt32("CurrentTable") ?? 0;
+}
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid"><hЗ>Закази № 1</hЗ></div>
-        </nav>
+            <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+                <div class="container-fluid">
+                    <a class="cart r-brand fs-3" asp-area="" asp-controller="Basket" asp-action="Index"><img class="imageKorzina" src="~/image/корзина.png" alt="Alternate Text" /><span class="snapcart"></span></a>
+                <h4>@currentTable</h4>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="navbar-collapse collapse justify-content-end">
+                        <ul class="navbar-nav flex-grow-2">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark fs-3" asp-area="" asp-controller="Orders" asp-action="OrderFood">Blyudi🥙</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark fs-3" asp-area="" asp-controller="Orders" asp-action="OrderDrink">napitka🍹</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark fs-3" asp-area="" asp-controller="Orders" asp-action="OrderSalad">salati🍱</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark fs-3" asp-area="" asp-controller="Home" asp-action="Privacy">
+                                    Info
+
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+      
     </header>
     <div class="container">
         <main role="main" class="content pb-3">
@@ -22,50 +53,9 @@
         </main>
     </div>
 
-    <footer class="footer-fixed">
-        <div class="image-track">
-            <a asp-controller="Orders" asp-action="OrderFood">
-                <div class="image-card">
-                    <img src="~/image/tantuni.jpg" alt="Eды" />
-                    <p class="image-title">Еда</p>
-                </div>
-            </a>
-
-            <a asp-controller="Orders" asp-action="OrderDrink">
-                <div class="image-card">
-                    <img src="~/image/ccole.jpg" alt="Напитка" />
-                    <p class="image-title">Кола</p>
-                </div>
-            </a>
-
-            <a asp-controller="Orders" asp-action="OrderSalad">
-                <div class="image-card">
-                    <img src="~/image/salat1.jpg" alt="Салата" />
-                    <p class="image-title">Салат</p>
-                </div>
-            </a>
-
-            <div class="image-card">
-                <img src="~/image/xodog.jpg" alt="Хот-дог" />
-                <p class="image-title">Хот-дог</p>
-            </div>
-
-            <div class="image-card">
-                <img src="~/image/limonchoy.jpg" alt="Лимонный чай" />
-                <p class="image-title">Лимонный чай</p>
-            </div>
-
-            <div class="image-card">
-                <img src="~/image/choy.jpg" alt="Чай" />
-                <p class="image-title">Чай</p>
-            </div>
-
-            <div class="Cart image-card">
-                <img src="~/image/корзина.png" alt="Корзина" />
-                <p class="image-title">Корзина</p>
-            </div>
-        </div>
-    </footer>
+  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

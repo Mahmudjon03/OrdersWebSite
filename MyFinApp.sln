@@ -3,19 +3,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{22A94039-3CEA-44A8-8A54-743583C15399}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{22A94039-3CEA-44A8-8A54-743583C15399}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastractructure", "Infrastractructure\Infrastractructure.csproj", "{19E077ED-C8FB-4B31-87E0-79FAE0F215BD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastractructure", "Infrastractructure\Infrastractructure.csproj", "{19E077ED-C8FB-4B31-87E0-79FAE0F215BD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrdersApp", "OrdersApp\OrdersApp.csproj", "{08CE3671-0EE4-4237-87AA-6C63B03BEDDD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrdersApp", "OrdersApp\OrdersApp.csproj", "{08CE3671-0EE4-4237-87AA-6C63B03BEDDD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{22A94039-3CEA-44A8-8A54-743583C15399}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -30,5 +27,8 @@ Global
 		{08CE3671-0EE4-4237-87AA-6C63B03BEDDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{08CE3671-0EE4-4237-87AA-6C63B03BEDDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{08CE3671-0EE4-4237-87AA-6C63B03BEDDD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 EndGlobal

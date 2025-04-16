@@ -8,6 +8,7 @@ C:\Users\User\Desktop\MyFinApp\Infrastractructure\obj\Debug\net8.0\Infrastractru
 C:\Users\User\Desktop\MyFinApp\Infrastractructure\obj\Debug\net8.0\Infrastractructure.AssemblyInfoInputs.cache
 C:\Users\User\Desktop\MyFinApp\Infrastractructure\obj\Debug\net8.0\Infrastractructure.AssemblyInfo.cs
 C:\Users\User\Desktop\MyFinApp\Infrastractructure\obj\Debug\net8.0\Infrastractructure.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\MyFinApp\Infrastractructure\obj\Debug\net8.0\Infrastractructure.sourcelink.json
 C:\Users\User\Desktop\MyFinApp\Infrastractructure\obj\Debug\net8.0\Infrastr.4D93A2EA.Up2Date
 C:\Users\User\Desktop\MyFinApp\Infrastractructure\obj\Debug\net8.0\Infrastractructure.dll
 C:\Users\User\Desktop\MyFinApp\Infrastractructure\obj\Debug\net8.0\refint\Infrastractructure.dll

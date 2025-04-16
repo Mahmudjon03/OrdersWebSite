@@ -1,102 +1,113 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
-<div class="container mt-5">
+﻿@using Domain.Models
+@using RestaurantLibrary.Models
+@model List<Product>
+
+<div class="    " >
     <div class="row">
+        @foreach (var food in Model)
+        {
+            <div class="col-6 col-md-4 mb-4 food-info">
+                <img class="images" src="@($"http://127.0.0.1/android/php/photos/images/{food.prod_name}{food.prod_id}.png")" alt="foto"
+                     style="cursor:pointer"
+                     data-bs-toggle="modal" data-bs-target="#tantuniModal.@food.prod_id" />
+                <h4 class="texts">@food.prod_name</h4>
+                <h5 class="texts">@food.prod_price </h5>
+                <div style="display:flex">
+                    <form class="add-to-cart-form" method="post">
+                        <input type="hidden" name="id" value="@food.prod_id" />
+                        <input type="hidden" name="name" value="@food.prod_name" />
+                        <input type="hidden" name="price" value="@food.prod_price" />
+                        <button type="submit" class="btn btn-success">На Корзину</button>
+                    </form>
 
-        <div class="col-6 col-md-4 mb-4 food-info">
-            <img class="images" src="~/image/tantuni.jpg" alt="Alternate texts"  />
-            <h4 class="texts">Тантуни</h4>
-         
-            <div style="display:flex" >
-                <button class="knopka">-</button>
-                <button class ="knopka">+</button>
+                </div>
             </div>
-        </div>
+            //modelskiy
+            <div class="modal fade" id="tantuniModal.@food.prod_id" tabindex="-1" aria-labelledby="tantuniModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="tantuniModalLabel">Тантуни</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                        </div>
+                        <div class="modal-body text-center">
 
-        <div class="col-6 col-md-4 mb-4 food-info">
-            <img class="images" src="~/image/tantuni2.jpg" alt="Alternate texts"  />
-            <h4 class="texts">Тантуни 2</h4>
-            <div style="display:flex;">
-                <button class="knopka">-</button>
-                <button class="knopka">+</button>
+                            <img src="" alt="Tantuni" class="img-fluid rounded mb-2 w-75 h-75" style="max-height: 300px;" />
+
+
+                            <p>@food.prod_category</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-        </div>
-        <div class="col-6 col-md-4 mb-4 food-info">
-            <img class="images" src="~/image/tantuni3.jpg" alt="Alternate texts"  />
-
-            <h4 class="texts">Тантуни</h4>
-            <div style="display:flex;">
-                <button class="knopka">-</button>
-                <button class="knopka">+</button>
-            </div>
-
-        </div>
-
-        <div class="col-6 col-md-4 mb-4 food-info">
-            <img class="images" src="~/image/tantuni.jpg" alt="Alternate texts"  />
-            <h4 class="texts">Тантуни</h4>
-            <div style="display:flex;"><button class="knopka">-</button><button class="knopka">+</button></div>
-
-        </div>
-        <div class="col-6 col-md-4 mb-4 food-info">
-            <img class="images" src="~/image/tantuni2.jpg" alt="Alternate texts"  />
-            <h4 class="texts">Тантуни</h4>
-            <div style="display:flex;"><button class="knopka">-</button><button class="knopka">+</button></div>
-
-        </div>
-
-        <div class="col-6 col-md-4 mb-4 food-info">
-            <img class="images" src="~/image/tantuni3.jpg" alt="Alternate texts"     />
-            <h4 class="texts"> Tantuni6</h4>
-            <div style="display:flex;"><button class="knopka">-</button><button class="knopka">+</button></div>
-
-        </div>
-
-        <div class="col-6 col-md-4 mb-4 food-info">
-            <img class="images" src="~/image/tantuni.jpg" alt="Alternate texts"  />
-            <h4 class="texts">Tantuni7</h4>
-            <div style="display:flex;"><button class="knopka">-</button><button class="knopka">+</button></div>
-
-        </div>
-
-        <div class="col-6 col-md-4 mb-4 food-info">
-            <img class="images" src="~/image/tantuni2.jpg" alt="Alternate texts"  />
-            <h4 class="texts">Tantuni8</h4>
-            <div style="display:flex;"><button class="knopka">-</button><button class="knopka">+</button></div>
-
-        </div>
-
-        <div class="col-6 col-md-4 mb-4 food-info">
-            <img class="images" src="~/image/tantuni3.jpg" alt="Alternate texts"  />
-            <h4 class="texts"> Tantuni9</h4>
-            <div style="display:flex;"><button class="knopka">-</button><button class="knopka">+</button></div>
-
-        </div>
-
-        <div class="col-6 col-md-4 mb-4 food-info">
-            <img class="images" src="~/image/shurma2.jpg" alt="Alternate texts"  />
-            <h4 class="texts">Tantuni10</h4>
-            <div style="display:flex;"><button class="knopka">-</button><button class="knopka">+</button></div>
-
-        </div>
-
-        <div class="col-6 col-md-4 mb-4 food-info">
-            <img class="images" src="~/image/tantuni2.jpg" alt="Alternate texts"  />
-            <h4 class="texts">Tantuni11</h4>
-            <div style="display:flex;"><button class="knopka">-</button><button class="knopka">+</button></div>
-
-        </div>
-
-        <div class="col-6 col-md-4 mb-4 food-info">
-            <img class="images" src="~/image/shurma2.jpg" alt="Alternate texts" />
-            <h4 class="texts">Tantuni12</h4>
-            <div style="display:flex;"><button class="knopka">-</button><button class="knopka">+</button></div>
-
-        </div>
-
+        }
     </div>
 </div>
+
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $(".add-to-cart-form").submit(function (e) {
+                e.preventDefault(); // otmenyaem peresylku formy
+
+                var form = $(this);
+                var data = form.serialize();
+
+                $.ajax({
+                    type: "POST",
+                    url: "/Basket/AddToBasket",
+                    data: data,
+                    success: function () {
+                        const toastEl = document.getElementById('cartToast');
+                        const toast = new bootstrap.Toast(toastEl);
+                        toast.show();
+                        updateCartCount();
+                        // mozhno zdes' obnovit' znachok korziny ili chto-to eshcho
+                    },
+                    error: function () {
+                        alert("❌ Ошибка при добавлении в корзину.");
+                    }
+                });
+            });
+        });
+    </script>
+}
+
+<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 9999">
+    <div id="cartToast" class="toast align-items-center text-bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="d-flex">
+            <div class="toast-body">
+                ✅ Товар добавлен в корзину!
+            </div>
+            <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Закрыть"></button>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+    function updateCartCount() {
+        $.ajax({
+            url: '/Basket/GetCartCount',
+            method: 'GET',
+            success: function (count) {
+                $(".snapcart").show();
+                $(".snapcart").text(count); // obnovlyaem chislo v znachke
+            },
+            error: function () {
+                console.log("Не удалось обновить корзину");
+            }
+        });
+    }
+
+    // Zapuskaem pri zagruzke i posle dobavleniya v korzinu
+    $(document).ready(function () {
+        updateCartCount();
+    });
+</script>
