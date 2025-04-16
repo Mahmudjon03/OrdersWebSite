@@ -7,7 +7,7 @@
         @foreach (var food in Model)
         {
             <div class="col-6 col-md-4 mb-4 food-info">
-                <img class="images" src="@($"http://127.0.0.1/android/php/photos/images/{food.prod_name}{food.prod_id}.png")" alt="foto"
+                <img class="images" src="@($"~/image/{food.prod_name}{food.prod_id}.png")" alt="foto"
                      style="cursor:pointer"
                      data-bs-toggle="modal" data-bs-target="#tantuniModal.@food.prod_id" />
                 <h4 class="texts">@food.prod_name</h4>

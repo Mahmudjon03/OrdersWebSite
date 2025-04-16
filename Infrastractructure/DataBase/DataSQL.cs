@@ -6,7 +6,7 @@ namespace RestaurantLibrary.Database
 {
     public static class DataSQL
     {
-        public static string URL = string.Format("http://192.168.128.57/android/php");
+        public static string URL = string.Format("http://localhost/android/php");
         //public static string URL = string.Format("https://cg97830.tw1.ru/android/php/");
 
         public static string ConvertDouble(double text)

@@ -30,12 +30,12 @@ namespace OrdersApp.Controllers
             var orders = new Order()
             {
                 order_main = orderId,
-                order_user = 1,
+                order_user = -1,
                 order_shift = 1,
                 order_date = DateTimeHelper.GetCurrentDateTimeString(),
                 order_close_date = DateTimeHelper.GetCurrentDateTimeString(),
                 order_price = 100,
-                order_table = ,
+                order_table = HttpContext.Session.GetInt32("CurrentTable") ?? 0,
                 order_delivery = (int)EnumOrderType.Default,
                 order_payment = 1,
                 order_status = 1,
