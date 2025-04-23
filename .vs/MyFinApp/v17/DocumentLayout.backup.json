@@ -3,32 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\MyFinApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{19E077ED-C8FB-4B31-87E0-79FAE0F215BD}|Infrastractructure\\Infrastractructure.csproj|c:\\users\\user\\desktop\\myfinapp\\infrastractructure\\database\\datasql.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{19E077ED-C8FB-4B31-87E0-79FAE0F215BD}|Infrastractructure\\Infrastractructure.csproj|solutionrelative:infrastractructure\\database\\datasql.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{08CE3671-0EE4-4237-87AA-6C63B03BEDDD}|OrdersApp\\OrdersApp.csproj|c:\\users\\user\\desktop\\myfinapp\\ordersapp\\controllers\\basketcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{08CE3671-0EE4-4237-87AA-6C63B03BEDDD}|OrdersApp\\OrdersApp.csproj|solutionrelative:ordersapp\\controllers\\basketcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{08CE3671-0EE4-4237-87AA-6C63B03BEDDD}|OrdersApp\\OrdersApp.csproj|c:\\users\\user\\desktop\\myfinapp\\ordersapp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{08CE3671-0EE4-4237-87AA-6C63B03BEDDD}|OrdersApp\\OrdersApp.csproj|solutionrelative:ordersapp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{08CE3671-0EE4-4237-87AA-6C63B03BEDDD}|OrdersApp\\OrdersApp.csproj|c:\\users\\user\\desktop\\myfinapp\\ordersapp\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{08CE3671-0EE4-4237-87AA-6C63B03BEDDD}|OrdersApp\\OrdersApp.csproj|solutionrelative:ordersapp\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{08CE3671-0EE4-4237-87AA-6C63B03BEDDD}|OrdersApp\\OrdersApp.csproj|c:\\users\\user\\desktop\\myfinapp\\ordersapp\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{08CE3671-0EE4-4237-87AA-6C63B03BEDDD}|OrdersApp\\OrdersApp.csproj|solutionrelative:ordersapp\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08CE3671-0EE4-4237-87AA-6C63B03BEDDD}|OrdersApp\\OrdersApp.csproj|c:\\users\\user\\desktop\\myfinapp\\ordersapp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{08CE3671-0EE4-4237-87AA-6C63B03BEDDD}|OrdersApp\\OrdersApp.csproj|solutionrelative:ordersapp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19E077ED-C8FB-4B31-87E0-79FAE0F215BD}|Infrastractructure\\Infrastractructure.csproj|c:\\users\\user\\desktop\\myfinapp\\infrastractructure\\database\\datasql.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19E077ED-C8FB-4B31-87E0-79FAE0F215BD}|Infrastractructure\\Infrastractructure.csproj|solutionrelative:infrastractructure\\database\\datasql.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{08CE3671-0EE4-4237-87AA-6C63B03BEDDD}|OrdersApp\\OrdersApp.csproj|c:\\users\\user\\desktop\\myfinapp\\ordersapp\\views\\orders\\orderfood.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{08CE3671-0EE4-4237-87AA-6C63B03BEDDD}|OrdersApp\\OrdersApp.csproj|solutionrelative:ordersapp\\views\\orders\\orderfood.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{19E077ED-C8FB-4B31-87E0-79FAE0F215BD}|Infrastractructure\\Infrastractructure.csproj|c:\\users\\user\\desktop\\myfinapp\\infrastractructure\\models\\que.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{19E077ED-C8FB-4B31-87E0-79FAE0F215BD}|Infrastractructure\\Infrastractructure.csproj|solutionrelative:infrastractructure\\models\\que.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{08CE3671-0EE4-4237-87AA-6C63B03BEDDD}|OrdersApp\\OrdersApp.csproj|c:\\users\\user\\desktop\\myfinapp\\ordersapp\\views\\basket\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{08CE3671-0EE4-4237-87AA-6C63B03BEDDD}|OrdersApp\\OrdersApp.csproj|solutionrelative:ordersapp\\views\\basket\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08CE3671-0EE4-4237-87AA-6C63B03BEDDD}|OrdersApp\\OrdersApp.csproj|c:\\users\\user\\desktop\\myfinapp\\ordersapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{08CE3671-0EE4-4237-87AA-6C63B03BEDDD}|OrdersApp\\OrdersApp.csproj|solutionrelative:ordersapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19E077ED-C8FB-4B31-87E0-79FAE0F215BD}|Infrastractructure\\Infrastractructure.csproj|c:\\users\\user\\desktop\\myfinapp\\infrastractructure\\models\\que.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19E077ED-C8FB-4B31-87E0-79FAE0F215BD}|Infrastractructure\\Infrastractructure.csproj|solutionrelative:infrastractructure\\models\\que.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{19E077ED-C8FB-4B31-87E0-79FAE0F215BD}|Infrastractructure\\Infrastractructure.csproj|c:\\users\\user\\desktop\\myfinapp\\infrastractructure\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -49,10 +57,6 @@
       "RelativeMoniker": "D:0:0:{19E077ED-C8FB-4B31-87E0-79FAE0F215BD}|Infrastractructure\\Infrastractructure.csproj|solutionrelative:infrastractructure\\helpers\\enums\\enumdetailsstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{08CE3671-0EE4-4237-87AA-6C63B03BEDDD}|OrdersApp\\OrdersApp.csproj|c:\\users\\user\\desktop\\myfinapp\\ordersapp\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{08CE3671-0EE4-4237-87AA-6C63B03BEDDD}|OrdersApp\\OrdersApp.csproj|solutionrelative:ordersapp\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{19E077ED-C8FB-4B31-87E0-79FAE0F215BD}|Infrastractructure\\Infrastractructure.csproj|c:\\users\\user\\desktop\\myfinapp\\infrastractructure\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{19E077ED-C8FB-4B31-87E0-79FAE0F215BD}|Infrastractructure\\Infrastractructure.csproj|solutionrelative:infrastractructure\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -69,20 +73,8 @@
       "RelativeMoniker": "D:0:0:{08CE3671-0EE4-4237-87AA-6C63B03BEDDD}|OrdersApp\\OrdersApp.csproj|solutionrelative:ordersapp\\models\\sessionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{08CE3671-0EE4-4237-87AA-6C63B03BEDDD}|OrdersApp\\OrdersApp.csproj|c:\\users\\user\\desktop\\myfinapp\\ordersapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{08CE3671-0EE4-4237-87AA-6C63B03BEDDD}|OrdersApp\\OrdersApp.csproj|solutionrelative:ordersapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{08CE3671-0EE4-4237-87AA-6C63B03BEDDD}|OrdersApp\\OrdersApp.csproj|c:\\users\\user\\desktop\\myfinapp\\ordersapp\\views\\orders\\orderdrink.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{08CE3671-0EE4-4237-87AA-6C63B03BEDDD}|OrdersApp\\OrdersApp.csproj|solutionrelative:ordersapp\\views\\orders\\orderdrink.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{08CE3671-0EE4-4237-87AA-6C63B03BEDDD}|OrdersApp\\OrdersApp.csproj|c:\\users\\user\\desktop\\myfinapp\\ordersapp\\ordersapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{08CE3671-0EE4-4237-87AA-6C63B03BEDDD}|OrdersApp\\OrdersApp.csproj|solutionrelative:ordersapp\\ordersapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{08CE3671-0EE4-4237-87AA-6C63B03BEDDD}|OrdersApp\\OrdersApp.csproj|c:\\users\\user\\desktop\\myfinapp\\ordersapp\\views\\orders\\ordersalad.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{08CE3671-0EE4-4237-87AA-6C63B03BEDDD}|OrdersApp\\OrdersApp.csproj|solutionrelative:ordersapp\\views\\orders\\ordersalad.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{19E077ED-C8FB-4B31-87E0-79FAE0F215BD}|Infrastractructure\\Infrastractructure.csproj|c:\\users\\user\\desktop\\myfinapp\\infrastractructure\\infrastractructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
@@ -164,7 +156,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -180,101 +172,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Category.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\MyFinApp\\Infrastractructure\\Models\\Category.cs",
-              "RelativeDocumentMoniker": "Infrastractructure\\Models\\Category.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\MyFinApp\\Infrastractructure\\Models\\Category.cs",
-              "RelativeToolTip": "Infrastractructure\\Models\\Category.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-14T18:52:28.523Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "site.css",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\MyFinApp\\OrdersApp\\wwwroot\\css\\site.css",
-              "RelativeDocumentMoniker": "OrdersApp\\wwwroot\\css\\site.css",
-              "ToolTip": "C:\\Users\\User\\Desktop\\MyFinApp\\OrdersApp\\wwwroot\\css\\site.css",
-              "RelativeToolTip": "OrdersApp\\wwwroot\\css\\site.css",
-              "ViewState": "AgIAAIsAAAAAAAAAAAAAAJ8AAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-04-07T10:08:38.467Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "BasketController.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\MyFinApp\\OrdersApp\\Controllers\\BasketController.cs",
-              "RelativeDocumentMoniker": "OrdersApp\\Controllers\\BasketController.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\MyFinApp\\OrdersApp\\Controllers\\BasketController.cs",
-              "RelativeToolTip": "OrdersApp\\Controllers\\BasketController.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAgwCAAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-14T18:07:52.312Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "OrderDetails.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Downloads\\Telegram Desktop\\OrderDetails.cs",
-              "RelativeDocumentMoniker": "..\\..\\Downloads\\Telegram Desktop\\OrderDetails.cs",
-              "ToolTip": "C:\\Users\\User\\Downloads\\Telegram Desktop\\OrderDetails.cs",
-              "RelativeToolTip": "..\\..\\Downloads\\Telegram Desktop\\OrderDetails.cs",
-              "ViewState": "AgIAAJAAAAAAAAAAAAAAAKQAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-15T18:26:03.159Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "OrdersController.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\MyFinApp\\OrdersApp\\Controllers\\OrdersController.cs",
-              "RelativeDocumentMoniker": "OrdersApp\\Controllers\\OrdersController.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\MyFinApp\\OrdersApp\\Controllers\\OrdersController.cs",
-              "RelativeToolTip": "OrdersApp\\Controllers\\OrdersController.cs",
-              "ViewState": "AgIAAJMAAAAAAAAAAAA1wJUAAABAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-07T10:16:42.836Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\MyFinApp\\OrdersApp\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "OrdersApp\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\User\\Desktop\\MyFinApp\\OrdersApp\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "OrdersApp\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA4AAABFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-07T10:12:35.319Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "DataSQL.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\MyFinApp\\Infrastractructure\\DataBase\\DataSQL.cs",
-              "RelativeDocumentMoniker": "Infrastractructure\\DataBase\\DataSQL.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\MyFinApp\\Infrastractructure\\DataBase\\DataSQL.cs*",
-              "RelativeToolTip": "Infrastractructure\\DataBase\\DataSQL.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-14T11:28:10.151Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "OrderFood.cshtml",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\MyFinApp\\OrdersApp\\Views\\Orders\\OrderFood.cshtml",
               "RelativeDocumentMoniker": "OrdersApp\\Views\\Orders\\OrderFood.cshtml",
               "ToolTip": "C:\\Users\\User\\Desktop\\MyFinApp\\OrdersApp\\Views\\Orders\\OrderFood.cshtml",
               "RelativeToolTip": "OrdersApp\\Views\\Orders\\OrderFood.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA1AAAAAAAAAA==",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAADMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-04-07T10:47:09.933Z",
               "EditorCaption": ""
@@ -287,13 +191,115 @@
               "RelativeDocumentMoniker": "OrdersApp\\Views\\Basket\\Index.cshtml",
               "ToolTip": "C:\\Users\\User\\Desktop\\MyFinApp\\OrdersApp\\Views\\Basket\\Index.cshtml",
               "RelativeToolTip": "OrdersApp\\Views\\Basket\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAACIAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-14T18:15:02.037Z"
+              "WhenOpened": "2025-04-14T18:15:02.037Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\MyFinApp\\OrdersApp\\Program.cs",
+              "RelativeDocumentMoniker": "OrdersApp\\Program.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\MyFinApp\\OrdersApp\\Program.cs",
+              "RelativeToolTip": "OrdersApp\\Program.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAuwBoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-06T16:04:32.127Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\MyFinApp\\OrdersApp\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "OrdersApp\\wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\User\\Desktop\\MyFinApp\\OrdersApp\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "OrdersApp\\wwwroot\\css\\site.css",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAAAOAAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-04-07T10:08:38.467Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "OrdersController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\MyFinApp\\OrdersApp\\Controllers\\OrdersController.cs",
+              "RelativeDocumentMoniker": "OrdersApp\\Controllers\\OrdersController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\MyFinApp\\OrdersApp\\Controllers\\OrdersController.cs",
+              "RelativeToolTip": "OrdersApp\\Controllers\\OrdersController.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwAkAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T10:16:42.836Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BasketController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\MyFinApp\\OrdersApp\\Controllers\\BasketController.cs",
+              "RelativeDocumentMoniker": "OrdersApp\\Controllers\\BasketController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\MyFinApp\\OrdersApp\\Controllers\\BasketController.cs",
+              "RelativeToolTip": "OrdersApp\\Controllers\\BasketController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T18:07:52.312Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\MyFinApp\\OrdersApp\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "OrdersApp\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\User\\Desktop\\MyFinApp\\OrdersApp\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "OrdersApp\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-07T10:12:35.319Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DataSQL.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\MyFinApp\\Infrastractructure\\DataBase\\DataSQL.cs",
+              "RelativeDocumentMoniker": "Infrastractructure\\DataBase\\DataSQL.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\MyFinApp\\Infrastractructure\\DataBase\\DataSQL.cs",
+              "RelativeToolTip": "Infrastractructure\\DataBase\\DataSQL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T11:28:10.151Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "OrderDetails.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Downloads\\Telegram Desktop\\OrderDetails.cs",
+              "RelativeDocumentMoniker": "..\\..\\Downloads\\Telegram Desktop\\OrderDetails.cs",
+              "ToolTip": "C:\\Users\\User\\Downloads\\Telegram Desktop\\OrderDetails.cs",
+              "RelativeToolTip": "..\\..\\Downloads\\Telegram Desktop\\OrderDetails.cs",
+              "ViewState": "AgIAAJAAAAAAAAAAAAAAAKQAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T18:26:03.159Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Category.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\MyFinApp\\Infrastractructure\\Models\\Category.cs",
+              "RelativeDocumentMoniker": "Infrastractructure\\Models\\Category.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\MyFinApp\\Infrastractructure\\Models\\Category.cs",
+              "RelativeToolTip": "Infrastractructure\\Models\\Category.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T18:52:28.523Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "Que.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\MyFinApp\\Infrastractructure\\Models\\Que.cs",
               "RelativeDocumentMoniker": "Infrastractructure\\Models\\Que.cs",
@@ -305,7 +311,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "EnumDetailsStatus.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\MyFinApp\\Infrastractructure\\Helpers\\Enums\\EnumDetailsStatus.cs",
               "RelativeDocumentMoniker": "Infrastractructure\\Helpers\\Enums\\EnumDetailsStatus.cs",
@@ -317,7 +323,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "Order.cs",
               "DocumentMoniker": "C:\\Users\\User\\Downloads\\Telegram Desktop\\Order.cs",
               "RelativeDocumentMoniker": "..\\..\\Downloads\\Telegram Desktop\\Order.cs",
@@ -329,7 +335,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "Order.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\MyFinApp\\Infrastractructure\\Models\\Order.cs",
               "RelativeDocumentMoniker": "Infrastractructure\\Models\\Order.cs",
@@ -341,7 +347,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "OrderDetails.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\MyFinApp\\Infrastractructure\\Models\\OrderDetails.cs",
               "RelativeDocumentMoniker": "Infrastractructure\\Models\\OrderDetails.cs",
@@ -353,7 +359,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "Product.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\MyFinApp\\Infrastractructure\\Models\\Product.cs",
               "RelativeDocumentMoniker": "Infrastractructure\\Models\\Product.cs",
@@ -365,7 +371,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 19,
               "Title": "Infrastractructure.csproj",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\MyFinApp\\Infrastractructure\\Infrastractructure.csproj",
               "RelativeDocumentMoniker": "Infrastractructure\\Infrastractructure.csproj",
@@ -377,7 +383,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "SessionExtensions.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\MyFinApp\\OrdersApp\\Models\\SessionExtensions.cs",
               "RelativeDocumentMoniker": "OrdersApp\\Models\\SessionExtensions.cs",
@@ -389,7 +395,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "CartItem.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\MyFinApp\\Domain\\Models\\CartItem.cs",
               "RelativeDocumentMoniker": "Domain\\Models\\CartItem.cs",
@@ -401,7 +407,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 20,
               "Title": "Food.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\MyFinApp\\Domain\\Models\\Food.cs",
               "RelativeDocumentMoniker": "Domain\\Models\\Food.cs",
@@ -413,7 +419,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 18,
               "Title": "OrdersApp.csproj",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\MyFinApp\\OrdersApp\\OrdersApp.csproj",
               "RelativeDocumentMoniker": "OrdersApp\\OrdersApp.csproj",
@@ -425,43 +431,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "OrderSalad.cshtml",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\MyFinApp\\OrdersApp\\Views\\Orders\\OrderSalad.cshtml",
-              "RelativeDocumentMoniker": "OrdersApp\\Views\\Orders\\OrderSalad.cshtml",
-              "ToolTip": "C:\\Users\\User\\Desktop\\MyFinApp\\OrdersApp\\Views\\Orders\\OrderSalad.cshtml",
-              "RelativeToolTip": "OrdersApp\\Views\\Orders\\OrderSalad.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-07T10:48:06.953Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "OrderDrink.cshtml",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\MyFinApp\\OrdersApp\\Views\\Orders\\OrderDrink.cshtml",
-              "RelativeDocumentMoniker": "OrdersApp\\Views\\Orders\\OrderDrink.cshtml",
-              "ToolTip": "C:\\Users\\User\\Desktop\\MyFinApp\\OrdersApp\\Views\\Orders\\OrderDrink.cshtml",
-              "RelativeToolTip": "OrdersApp\\Views\\Orders\\OrderDrink.cshtml",
-              "ViewState": "AgIAACQAAAAAAAAAAAAYwDEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-07T10:47:46.728Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\MyFinApp\\OrdersApp\\Program.cs",
-              "RelativeDocumentMoniker": "OrdersApp\\Program.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\MyFinApp\\OrdersApp\\Program.cs",
-              "RelativeToolTip": "OrdersApp\\Program.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-06T16:04:32.127Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 28,
               "Title": "GridColumnSettings.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\MyFinApp\\Infrastractructure\\Helpers\\GridColumnSettings.cs",
               "RelativeDocumentMoniker": "Infrastractructure\\Helpers\\GridColumnSettings.cs",
@@ -473,7 +443,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 21,
               "Title": "Balance.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\MyFinApp\\Infrastractructure\\Models\\Balance.cs",
               "RelativeDocumentMoniker": "Infrastractructure\\Models\\Balance.cs",
@@ -485,7 +455,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 27,
               "Title": "Hash.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\MyFinApp\\Infrastractructure\\Helpers\\Hash.cs",
               "RelativeDocumentMoniker": "Infrastractructure\\Helpers\\Hash.cs",
@@ -497,7 +467,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 26,
               "Title": "SettingsJson.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\MyFinApp\\Infrastractructure\\Helpers\\SettingsJson.cs",
               "RelativeDocumentMoniker": "Infrastractructure\\Helpers\\SettingsJson.cs",
@@ -509,7 +479,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 25,
               "Title": "TransliterationHelper.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\MyFinApp\\Infrastractructure\\Helpers\\TransliterationHelper.cs",
               "RelativeDocumentMoniker": "Infrastractructure\\Helpers\\TransliterationHelper.cs",
@@ -521,7 +491,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 24,
               "Title": "UserNotifier.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\MyFinApp\\Infrastractructure\\Helpers\\UserNotifier.cs",
               "RelativeDocumentMoniker": "Infrastractructure\\Helpers\\UserNotifier.cs",
@@ -533,7 +503,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 23,
               "Title": "IUserNotifier.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\MyFinApp\\Infrastractructure\\Interfaces\\IUserNotifier.cs",
               "RelativeDocumentMoniker": "Infrastractructure\\Interfaces\\IUserNotifier.cs",
@@ -545,7 +515,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 22,
               "Title": "Vendor.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\MyFinApp\\Infrastractructure\\Models\\Vendor.cs",
               "RelativeDocumentMoniker": "Infrastractructure\\Models\\Vendor.cs",
@@ -557,7 +527,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 29,
               "Title": "DateTimeHelper.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\MyFinApp\\Infrastractructure\\Helpers\\DateTimeHelper.cs",
               "RelativeDocumentMoniker": "Infrastractructure\\Helpers\\DateTimeHelper.cs",
@@ -569,7 +539,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 30,
               "Title": "ImageServerIO.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\MyFinApp\\Infrastractructure\\DataBase\\ImageServerIO.cs",
               "RelativeDocumentMoniker": "Infrastractructure\\DataBase\\ImageServerIO.cs",
@@ -581,7 +551,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 31,
               "Title": "Domain.csproj",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\MyFinApp\\Domain\\Domain.csproj",
               "RelativeDocumentMoniker": "Domain\\Domain.csproj",
@@ -593,7 +563,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 32,
               "Title": "ErrorViewModel.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\MyFinApp\\OrdersApp\\Models\\ErrorViewModel.cs",
               "RelativeDocumentMoniker": "OrdersApp\\Models\\ErrorViewModel.cs",
@@ -605,7 +575,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 36,
               "Title": "site.js",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\MyFinApp\\OrdersApp\\wwwroot\\js\\site.js",
               "RelativeDocumentMoniker": "OrdersApp\\wwwroot\\js\\site.js",
@@ -617,7 +587,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 35,
               "Title": "bootstrap.css",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\MyFinApp\\OrdersApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
               "RelativeDocumentMoniker": "OrdersApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
@@ -629,7 +599,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 33,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\MyFinApp\\OrdersApp\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "OrdersApp\\Properties\\launchSettings.json",
@@ -641,7 +611,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 34,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\MyFinApp\\OrdersApp\\appsettings.json",
               "RelativeDocumentMoniker": "OrdersApp\\appsettings.json",

@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using RestaurantLibrary.Helpers;
 using RestaurantLibrary.Helpers.Enums;
 using RestaurantLibrary.Models;
-using System.Xml.Linq;
+
 
 namespace OrdersApp.Controllers
 {
@@ -59,7 +59,10 @@ namespace OrdersApp.Controllers
                 };
                 var result2 = await dbDetails.OnInsertAsync(detail);
             }
-            return RedirectToAction("Index");
+           
+            HttpContext.Session.Remove("Basket");
+
+            return RedirectToAction("OrderFood","Orders");
         }
 
 

@@ -20,7 +20,7 @@ html {
 body {
     height: 100%;
     margin: 0;
-    margin-bottom: 60px;
+  
 }
 
 header {
@@ -158,5 +158,70 @@ a {
     font-weight: bold;
     text-align: center;
     display:none;
- 
+ }
+
+.quantitydiv {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
 }
+
+    .quantitydiv button {
+        background-color: #4A90E2;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        font-size: 18px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+        .quantitydiv button:hover {
+            background-color: #357ABD;
+        }
+
+.qululu {
+    width: 60px;
+    text-align: center;
+    font-size: 15px;
+    padding: 5px;
+    border-radius: 8px;
+    border: 2px solid #4A90E2;
+}
+
+    /* Убираем стрелки (опционально) */
+    .qululu::-webkit-outer-spin-button,
+    .qululu::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    .qululu[type=number] {
+        -moz-appearance: textfield;
+    }
+
+
+.bottomdiv {
+    width: 95%;
+    height: 90px;
+    border:1px solid black;
+    border-radius: 10px;
+    position: fixed;
+    bottom: 20px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    background-color:white;
+    padding:10px;
+}
+.table-container {
+   
+    padding-bottom: 200px; /* чтобы последние строки не скрывались за нижним блоком */
+}
+
+.fooddiv{
+    padding-bottom:200px;
+}
+

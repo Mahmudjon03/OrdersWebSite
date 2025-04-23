@@ -2,12 +2,12 @@
 @using RestaurantLibrary.Models
 @model List<Product>
 
-<div class="    " >
+<div class="">
     <div class="row">
         @foreach (var food in Model)
         {
             <div class="col-6 col-md-4 mb-4 food-info">
-                <img class="images" src="@($"~/image/{food.prod_name}{food.prod_id}.png")" alt="foto"
+                <img class="images" src="~/image/@($"{food.prod_name}{food.prod_id}.png")" alt="foto"
                      style="cursor:pointer"
                      data-bs-toggle="modal" data-bs-target="#tantuniModal.@food.prod_id" />
                 <h4 class="texts">@food.prod_name</h4>
@@ -77,6 +77,7 @@
         });
     </script>
 }
+
 
 <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 9999">
     <div id="cartToast" class="toast align-items-center text-bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">

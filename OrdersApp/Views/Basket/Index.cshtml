@@ -1,20 +1,18 @@
 ﻿@using Domain.Models
 @model List<CartItem>
-
+@{
+    decimal total = 0;
+}
 <h2>Корзина</h2>
 
 <form asp-action="CreateOrderDetails" method="post">
-    <table class="table">
+    <table class="table-container">
         <thead>
             <tr>
-                <th>Фото</th>
-                <th>Название</th>
-                <th>Цена</th>
-                <th>Кол-во</th>
-                <th>Итог</th>
+              
             </tr>
         </thead>
-        <tbody>
+        <tbody class="fooddiv">
             @for (int i = 0; i < Model.Count; i++)
             {
                 <tr>
@@ -22,21 +20,91 @@
                         <img class="imagesCart" src="@($"http://127.0.0.1/android/php/photos/images/{Model[i].ProductName}{Model[i].ProductId}.png")" alt="foto" />
                     </td>
                     <td>
-                        <div>@Model[i].ProductName</div>
+
+                        <h5>@Model[i].ProductName</h5>
+                        <p>Цена <span id="price-@i">@Model[i].Price</span> $</p>
                         <input type="hidden" name="[@i].ProductName" value="@Model[i].ProductName" />
                         <input type="hidden" name="[@i].ProductId" value="@Model[i].ProductId" />
                         <input type="hidden" name="[@i].Price" value="@Model[i].Price" />
                     </td>
-                    <td>@Model[i].Price $</td>
+
                     <td>
-                        @Model[i].Quantity
-                        <input type="hidden" name="[@i].Quantity" value="@Model[i].Quantity" />
+                        <div class="quantitydiv">
+                            <button class="plus-btn" type="button" onclick="changeQuantity(@i, -1)">−</button>
+                            <input class="qululu" name="[@i].Quantity" id="quantity-@i" value="@Model[i].Quantity" type="number" min="1" onchange="updateTotal()" />
+                            <button class="minus-btn" type="button" onclick="changeQuantity(@i, 1)">+</button>
+                        </div>
                     </td>
-                    <td>@(Model[i].Price * Model[i].Quantity) $</td>
+                
                 </tr>
             }
+            <tr>
+               <td><br /><br/><br/><br/></td>
+                </tr>
         </tbody>
     </table>
+    <div class="bottomdiv">
+        <div>
+            <h6>Итого товаров: <span id="total-amount">@total</span></h6>
+            <h6>Скидка: <span id="discount">10</span>%</h6>
+            <h4>Итого: <span id="amount"></span> $</h4>
+        </div>
 
-    <button type="submit" class="btn btn-primary">Оформить заказ</button>
+    <button type="submit" class="butn btn btn-primary">Оформить заказ</button>
+    </div>
 </form>
+
+<script>
+    function changeQuantity(index, delta) {
+        const input = document.getElementById('quantity-' + index);
+        let value = parseInt(input.value) || 1;
+
+        value += delta;
+        if (value < 1) value = 1;
+
+        input.value = value;
+    }
+</script>
+
+
+
+<script>
+    function updateTotal() {
+        let total = 0;
+        const count = @Model.Count;
+
+        for (let i = 0; i < count; i++) {
+            const quantityInput = document.getElementById(`quantity-${i}`);
+            const priceSpan = document.getElementById(`price-${i}`);
+
+            if (quantityInput && priceSpan) {
+                const quantity = parseInt(quantityInput.value) || 0;
+                const price = parseFloat(priceSpan.textContent) || 0;
+
+                total += price * quantity;
+            }
+        }
+        const discount = parseInt(document.getElementById("discount").textContent) || 0;
+
+        console.log(discount);
+        const discountTotal = total * (1 - discount / 100);
+        document.getElementById("total-amount").textContent = total.toFixed(2);
+        document.getElementById("amount").textContent = discountTotal.toFixed(2);
+    }
+
+    function changeQuantity(index, delta) {
+        const quantityInput = document.getElementById(`quantity-${index}`);
+        let quantity = parseInt(quantityInput.value) || 0;
+        quantity += delta;
+        if (quantity < 1) quantity = 1;
+        quantityInput.value = quantity;
+
+        updateTotal();
+    }
+
+    // Вызываем сразу при загрузке страницы
+    window.onload = function () {
+        updateTotal();
+    };
+</script>
+
