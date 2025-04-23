@@ -1,4 +1,5 @@
 ﻿using RestaurantLibrary.Database;
+using RestaurantLibrary.Helpers;
 using RestSharp;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -9,6 +10,10 @@ namespace RestaurantLibrary.Models
     {
         public int prod_id { get; set; }
         public string prod_name { get; set; }
+        public string prod_inglish_name { get {
+            return TransliterationHelper.CyrillicToLatin(prod_name);
+                    }
+        }
         public double prod_price { get; set; }
         public int prod_category { get; set; }
         public int prod_kitchen { get; set; }

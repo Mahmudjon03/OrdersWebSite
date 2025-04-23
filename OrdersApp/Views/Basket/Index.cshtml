@@ -17,7 +17,7 @@
             {
                 <tr>
                     <td>
-                        <img class="imagesCart" src="@($"http://127.0.0.1/android/php/photos/images/{Model[i].ProductName}{Model[i].ProductId}.png")" alt="foto" />
+                        <img class="imagesCart" src="~/image/@(Model[i].EnglishNameProd)@(Model[i].ProductId).png" alt="foto" />
                     </td>
                     <td>
 
@@ -39,7 +39,7 @@
                 </tr>
             }
             <tr>
-               <td><br /><br/><br/><br/></td>
+                <td> <br class="bg-black" /> <br/> <br /> <br /> <br /> <br /> </td>
                 </tr>
         </tbody>
     </table>
@@ -54,57 +54,103 @@
     </div>
 </form>
 
+
+<div class="modal fade" id="confirmDeleteModal" tabindex="-1" aria-labelledby="confirmDeleteLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="confirmDeleteLabel">Удалить товар</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+            </div>
+            <div class="modal-body">
+                Вы уверены, что хотите удалить этот товар?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Нет</button>
+                <button type="button" class="btn btn-danger" id="confirmDeleteBtn">Да, удалить</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
 <script>
+    let pendingDeleteIndex = null;
+
     function changeQuantity(index, delta) {
         const input = document.getElementById('quantity-' + index);
         let value = parseInt(input.value) || 1;
+
+        if (value <= 1 && delta === -1) {
+            pendingDeleteIndex = index;
+            const modal = new bootstrap.Modal(document.getElementById('confirmDeleteModal'));
+            modal.show();
+            return;
+        }
 
         value += delta;
         if (value < 1) value = 1;
 
         input.value = value;
+        updateTotal();
+        location.reload();
+    }
+    document.getElementById('confirmDeleteBtn').addEventListener('click', function () {
+        if (pendingDeleteIndex !== null) {
+            fetch('/Basket/RemoveFromCart', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'RequestVerificationToken': getAntiForgeryToken()
+                },
+                body: JSON.stringify({ index: pendingDeleteIndex })
+            })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                      
+                       
+                        updateTotal();
+                        location.reload();
+                    }
+                });
+
+            pendingDeleteIndex = null;
+        }
+    });
+
+    function getAntiForgeryToken() {
+        return document.querySelector('input[name="__RequestVerificationToken"]')?.value || '';
     }
 </script>
 
 
 
 <script>
-    function updateTotal() {
-        let total = 0;
-        const count = @Model.Count;
+function updateTotal() {
+    let total = 0;
+    const count = @Model.Count;
 
-        for (let i = 0; i < count; i++) {
-            const quantityInput = document.getElementById(`quantity-${i}`);
-            const priceSpan = document.getElementById(`price-${i}`);
+    for (let i = 0; i < count; i++) {
+        const quantityInput = document.getElementById(`quantity-${i}`);
+        const priceSpan = document.getElementById(`price-${i}`);
 
-            if (quantityInput && priceSpan) {
-                const quantity = parseInt(quantityInput.value) || 0;
-                const price = parseFloat(priceSpan.textContent) || 0;
+        if (quantityInput && priceSpan) {
+            const quantity = parseInt(quantityInput.value) || 0;
+            const price = parseFloat(priceSpan.textContent) || 0;
 
-                total += price * quantity;
-            }
+            total += price * quantity;
         }
-        const discount = parseInt(document.getElementById("discount").textContent) || 0;
-
-        console.log(discount);
-        const discountTotal = total * (1 - discount / 100);
-        document.getElementById("total-amount").textContent = total.toFixed(2);
-        document.getElementById("amount").textContent = discountTotal.toFixed(2);
     }
+    const discount = parseInt(document.getElementById("discount").textContent) || 0;
 
-    function changeQuantity(index, delta) {
-        const quantityInput = document.getElementById(`quantity-${index}`);
-        let quantity = parseInt(quantityInput.value) || 0;
-        quantity += delta;
-        if (quantity < 1) quantity = 1;
-        quantityInput.value = quantity;
-
-        updateTotal();
-    }
-
-    // Вызываем сразу при загрузке страницы
-    window.onload = function () {
-        updateTotal();
-    };
+    console.log(discount);
+    const discountTotal = total * (1 - discount / 100);
+    document.getElementById("total-amount").textContent = total.toFixed(2);
+    document.getElementById("amount").textContent = discountTotal.toFixed(2);
+}
 </script>
+
+
 

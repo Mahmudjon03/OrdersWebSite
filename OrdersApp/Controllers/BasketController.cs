@@ -19,7 +19,7 @@ namespace OrdersApp.Controllers
         public IActionResult GetCartCount()
         {
             var basket = HttpContext.Session.GetObjectFromJson<List<CartItem>>("Basket") ?? new List<CartItem>();
-            int count = basket.Sum(x => x.Quantity);
+            int count = basket.Count;
             return Json(count);
         }
 
@@ -43,7 +43,7 @@ namespace OrdersApp.Controllers
                 order_comment = "mesage",
                 order_discount = 1.2
             };
-         var result =   await new Order().OnInsertAsync(orders);
+            var result = await new Order().OnInsertAsync(orders);
 
             OrderDetails detail;
             var dbDetails = new OrderDetails();
@@ -59,10 +59,10 @@ namespace OrdersApp.Controllers
                 };
                 var result2 = await dbDetails.OnInsertAsync(detail);
             }
-           
+
             HttpContext.Session.Remove("Basket");
 
-            return RedirectToAction("OrderFood","Orders");
+            return RedirectToAction("OrderFood", "Orders");
         }
 
 
@@ -96,6 +96,21 @@ namespace OrdersApp.Controllers
             HttpContext.Session.SetObjectAsJson("Basket", basket);
             return Ok();
         }
+    
+
+    [HttpPost]
+    public IActionResult RemoveFromCart(int index)
+    {
+        var basket = HttpContext.Session.GetObjectFromJson<List<CartItem>>("Basket") ?? new List<CartItem>();
+
+        if (index >= 0 && index < basket.Count)
+        {
+            basket.RemoveAt(index);
+            HttpContext.Session.SetObjectAsJson("Basket", basket);
+        }
+
+        return Json(new { success = true });
     }
 
+}
 }

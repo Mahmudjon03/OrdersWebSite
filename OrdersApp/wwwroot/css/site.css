@@ -225,3 +225,9 @@ a {
     padding-bottom:200px;
 }
 
+.cart-div{
+    width:90%;
+    border-radius:5px;
+    box-shadow:red 10px 10px inset; 
+    overflow:hidden;
+}

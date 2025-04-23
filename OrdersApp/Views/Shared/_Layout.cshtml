@@ -14,105 +14,73 @@
 @{
     var currentTable = Context.Session.GetInt32("CurrentTable") ?? 0;
 }
-<body>
-    <header>
+    <body>
+        <header>
             <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
                 <div class="container-fluid">
-                <a class="cart r-brand fs-3" asp-area="" asp-controller="Basket" asp-action="Index"><img class="imageKorzina" src="~/image/корзина.png" alt="Alternate Text" /><span class="snapcart" style="display:none;"></span></a>
-                <h4>@currentTable</h4>
+                    <a class="cart r-brand fs-3" asp-area="" asp-controller="Basket" asp-action="Index">
+                        <img class="imageKorzina" src="~/image/корзина.png" alt="Alternate Text" />
+                        <span class="snapcart" style="display:none;"></span>
+                    </a>
+                    <h4>№@currentTable</h4>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                             aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="navbar-collapse collapse justify-content-end">
-                    <ul class="navbar-nav flex-grow-2">
-                        <li class="nav-item">
-                            <a class="foodclik nav-link text-dark fs-3" asp-area="" asp-controller="Orders" asp-action="OrderFood" asp-route-category="33">🥙 Донер</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark fs-3" asp-area="" asp-controller="Orders" asp-action="OrderFood" asp-route-category="39">🌮 Тантуни</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark fs-3" asp-area="" asp-controller="Orders" asp-action="OrderFood" asp-route-category="40">🍹Нушокихои хунук</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark fs-3" asp-area="" asp-controller="Orders" asp-action="OrderFood" asp-route-category="44">🍵 Нушокихои гарм</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark fs-3" asp-area="" asp-controller="Orders" asp-action="OrderFood" asp-route-category="45">🍱 Комбо</a>
-                        </li>
-                    </ul>
+                        <ul class="navbar-nav flex-grow-2">
+                            <li class="nav-item">
+                                <a class="foodclik nav-link text-dark fs-3" asp-area="" asp-controller="Orders" asp-action="OrderFood" asp-route-category="33">🥙 Донер</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark fs-3" asp-area="" asp-controller="Orders" asp-action="OrderFood" asp-route-category="39">🌮 Тантуни</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark fs-3" asp-area="" asp-controller="Orders" asp-action="OrderFood" asp-route-category="40">🍹Нушокихои хунук</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark fs-3" asp-area="" asp-controller="Orders" asp-action="OrderFood" asp-route-category="44">🍵 Нушокихои гарм</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark fs-3" asp-area="" asp-controller="Orders" asp-action="OrderFood" asp-route-category="45">🍱 Комбо</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-            </nav>
-      
-    </header>
-    <div class="container">
-        <main role="main" class="content pb-3">
-            @RenderBody()
-        </main>
-    </div>
+            </nav> 
 
-  
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        </header>
+        <div class="container">
+            <main role="main" class="content pb-3">
+                @RenderBody()
+            </main>
+        </div>
 
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
-    @section Scripts {
-        <script>
-            $(document).ready(function () {
-                $(".foodclik").submit(function (e) {
-                    e.preventDefault(); // otmenyaem peresylku formy
 
-                    var form = $(this);
-                    var data = form.serialize();
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-                    $.ajax({
-                        type: "POST",
-                        url: "/Basket/AddToBasket",
-                        data: data,
-                        success: function () {
-                            const toastEl = document.getElementById('cartToast');
-                            const toast = new bootstrap.Toast(toastEl);
-                            toast.show();
-                            updateCartCount();
-                            // mozhno zdes' obnovit' znachok korziny ili chto-to eshcho
-                        },
-                        error: function () {
-                            alert("❌ Ошибка при добавлении в корзину.");
-                        }
-                    });
-                });
-            });
-        </script>
-    }
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+
+        @await RenderSectionAsync("Scripts", required: false)
+
     <script>
-        <script>
-            function updateCartCount() {
-                $.ajax({
-                    url: '/Basket/GetCartCount',
-                    method: 'GET',
-                    success: function (count) {
-                        if (count > 0) {
-                            $(".snapcart").show().text(count); // показываем и обновляем
-                        } else {
-                            $(".snapcart").hide(); // скрываем, если 0
-                        }
-                    },
-                    error: function () {
-                        console.log("❌ Не удалось обновить корзину");
+        document.addEventListener('DOMContentLoaded', function () {
+            const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+            const navbarCollapse = document.querySelector('.navbar-collapse');
+
+            navLinks.forEach(function (link) {
+                link.addEventListener('click', function () {
+                    if (navbarCollapse.classList.contains('show')) {
+                        new bootstrap.Collapse(navbarCollapse).hide();
                     }
                 });
-            }
-
-            $(document).ready(function () {
-                updateCartCount();
             });
+        });
     </script>
 
-    </script>
-</body>
+
+    </body>
 </html>

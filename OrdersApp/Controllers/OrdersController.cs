@@ -19,11 +19,6 @@ namespace OrdersApp.Controllers
             }
 
             var product = await new Product().OnLoadAsync();
-            foreach (var prod in product)
-            {
-                prod.prod_name = TransliterationHelper.CyrillicToLatin(prod.prod_name);
-            }
-
             var result = product.Where(x => x.prod_category == category).ToList();
 
             return View(result);
