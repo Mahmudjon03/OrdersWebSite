@@ -1,6 +1,5 @@
 ﻿using Domain.Models;
 using Microsoft.AspNetCore.Mvc;
-using RestaurantLibrary.Helpers;
 using RestaurantLibrary.Models;
 
 namespace OrdersApp.Controllers
@@ -19,8 +18,14 @@ namespace OrdersApp.Controllers
             }
 
             var product = await new Product().OnLoadAsync();
-            var result = product.Where(x => x.prod_category == category).ToList();
+            var basket = HttpContext.Session.GetObjectFromJson<List<CartItem>>("Basket") ?? new List<CartItem>();
 
+            foreach (var u in product)
+            {
+                u.cart_state = basket.Any(i => i.ProductId == u.prod_id);
+            }
+
+            var result = product.Where(x => x.prod_category == category).ToList();
             return View(result);
         }
     }

@@ -7,17 +7,19 @@
         @foreach (var food in Model)
         {
             <div class="col-6 col-md-4 mb-4 food-info">
-                <img class="images" src="~/image/@($"{food.prod_inglish_name}{food.prod_id}.png")" alt="foto"
+                <img class="images product-img" src="~/image/@($"{food.prod_inglish_name}{food.prod_id}.png")" alt="foto"
                      style="cursor:pointer"
                      data-bs-toggle="modal" data-bs-target="#tantuniModal.@food.prod_id" />
                 <h4 class="texts">@food.prod_name</h4>
                 <h5 class="texts">@food.prod_price </h5>
                 <div style="display:flex">
-                    <form class="add-to-cart-form" method="post">
+                    <form class="add-to-cart-form" method="post" data-product-id="@food.prod_id">
                         <input type="hidden" name="id" value="@food.prod_id" />
                         <input type="hidden" name="name" value="@food.prod_name" />
                         <input type="hidden" name="price" value="@food.prod_price" />
-                        <button type="submit" class="btn btn-success">В Корзину</button>
+                        <button type="submit" class="btn btn-success add-to-cart-btn" data-added="@food.cart_state.ToString().ToLower()">
+                            @(food.cart_state ? "Добавлено" : "В Корзину")
+                        </button>
                     </form>
 
                 </div>
@@ -44,12 +46,11 @@
                     </div>
                 </div>
             </div>
-
         }
     </div>
 </div>
 
-<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 9999">
+<div class="position-fixed top-0 end-0 p-3" style="z-index: 9999">
     <div id="cartToast" class="toast align-items-center text-bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
         <div class="d-flex">
             <div class="toast-body">
@@ -59,6 +60,5 @@
         </div>
     </div>
 </div>
-
 
 

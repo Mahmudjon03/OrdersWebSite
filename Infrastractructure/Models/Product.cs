@@ -14,6 +14,8 @@ namespace RestaurantLibrary.Models
             return TransliterationHelper.CyrillicToLatin(prod_name);
                     }
         }
+
+        public bool cart_state { get; set; } = false;
         public double prod_price { get; set; }
         public int prod_category { get; set; }
         public int prod_kitchen { get; set; }

@@ -78,6 +78,7 @@ namespace OrdersApp.Controllers
             var basket = HttpContext.Session.GetObjectFromJson<List<CartItem>>("Basket") ?? new List<CartItem>();
 
             var existingItem = basket.FirstOrDefault(x => x.ProductId == id);
+
             if (existingItem != null)
             {
                 existingItem.Quantity++;
@@ -96,21 +97,42 @@ namespace OrdersApp.Controllers
             HttpContext.Session.SetObjectAsJson("Basket", basket);
             return Ok();
         }
-    
 
-    [HttpPost]
-    public IActionResult RemoveFromCart(int index)
-    {
-        var basket = HttpContext.Session.GetObjectFromJson<List<CartItem>>("Basket") ?? new List<CartItem>();
+        [HttpPost]
 
-        if (index >= 0 && index < basket.Count)
+        public IActionResult IncreaseQuantity([FromBody]RemoveRequest prod)
         {
-            basket.RemoveAt(index);
-            HttpContext.Session.SetObjectAsJson("Basket", basket);
+            var basket = HttpContext.Session.GetObjectFromJson<List<CartItem>>("Basket") ?? new List<CartItem>();
+
+            var item = basket.FirstOrDefault(x => x.ProductId == prod.ProductId);
+            if (item != null)
+            {
+                item.Quantity++;
+                HttpContext.Session.SetObjectAsJson("Basket", basket);
+                return Json(new { success = true, quantity = item.Quantity });
+            }
+
+            return Json(new { success = false });
         }
 
-        return Json(new { success = true });
-    }
+        [HttpPost]
+        public IActionResult RemoveFromCart([FromBody] RemoveRequest product)
+        {
+            var basket = HttpContext.Session.GetObjectFromJson<List<CartItem>>("Basket") ?? new List<CartItem>();
 
-}
+            var itemToRemove = basket.FirstOrDefault(item => item.ProductId == product.ProductId);
+            if (itemToRemove != null)
+            {
+                basket.Remove(itemToRemove);
+                HttpContext.Session.SetObjectAsJson("Basket", basket);
+            }
+
+            return Json(new { success = true });
+        }
+        public class RemoveRequest
+        {
+            public int ProductId { get; set; }
+        }
+
+    }
 }

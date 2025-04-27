@@ -15,42 +15,50 @@
     var currentTable = Context.Session.GetInt32("CurrentTable") ?? 0;
 }
     <body>
-        <header>
-            <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-                <div class="container-fluid">
-                    <a class="cart r-brand fs-3" asp-area="" asp-controller="Basket" asp-action="Index">
+
+    <header>
+        <nav class="navbar navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-3">
+                    <a id="cart-icon" class="cart r-brand fs-3" asp-area="" asp-controller="Basket" asp-action="Index">
                         <img class="imageKorzina" src="~/image/корзина.png" alt="Alternate Text" />
                         <span class="snapcart" style="display:none;"></span>
                     </a>
-                    <h4>№@currentTable</h4>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                            aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="navbar-collapse collapse justify-content-end">
-                        <ul class="navbar-nav flex-grow-2">
-                            <li class="nav-item">
-                                <a class="foodclik nav-link text-dark fs-3" asp-area="" asp-controller="Orders" asp-action="OrderFood" asp-route-category="33">🥙 Донер</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark fs-3" asp-area="" asp-controller="Orders" asp-action="OrderFood" asp-route-category="39">🌮 Тантуни</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark fs-3" asp-area="" asp-controller="Orders" asp-action="OrderFood" asp-route-category="40">🍹Нушокихои хунук</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark fs-3" asp-area="" asp-controller="Orders" asp-action="OrderFood" asp-route-category="44">🍵 Нушокихои гарм</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark fs-3" asp-area="" asp-controller="Orders" asp-action="OrderFood" asp-route-category="45">🍱 Комбо</a>
-                            </li>
-                        </ul>
-                    </div>
                 </div>
-            </nav> 
+                    <h4  class="mb-0">№@currentTable</h4>
 
-        </header>
-        <div class="container">
+                <!-- Бургер -->
+                <div class="burger d-sm-none" id="burger">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+
+                <!-- Сайдбар меню -->
+                <div class="sidebar d-sm-none" id="sidebar">
+                    <ul>
+                        <li><a asp-area="" asp-controller="Orders" asp-action="OrderFood" asp-route-category="33">🥙 Донер</a></li>
+                        <li><a asp-area="" asp-controller="Orders" asp-action="OrderFood" asp-route-category="39">🌮 Тантуни</a></li>
+                        <li><a asp-area="" asp-controller="Orders" asp-action="OrderFood" asp-route-category="40">🍹 Нушокихои хунук</a></li>
+                        <li><a asp-area="" asp-controller="Orders" asp-action="OrderFood" asp-route-category="44">🍵 Нушокихои гарм</a></li>
+                        <li><a asp-area="" asp-controller="Orders" asp-action="OrderFood" asp-route-category="45">🍱 Комбо</a></li>
+                    </ul>
+                </div>
+
+                <!-- Обычное меню для больших экранов -->
+                <div class="d-none d-sm-block">
+                    <ul class="navbar-nav flex-row gap-4">
+                        <li class="nav-item"><a class="nav-link text-dark fs-3" asp-area="" asp-controller="Orders" asp-action="OrderFood" asp-route-category="33">🥙 Донер</a></li>
+                        <li class="nav-item"><a class="nav-link text-dark fs-3" asp-area="" asp-controller="Orders" asp-action="OrderFood" asp-route-category="39">🌮 Тантуни</a></li>
+                        <li class="nav-item"><a class="nav-link text-dark fs-3" asp-area="" asp-controller="Orders" asp-action="OrderFood" asp-route-category="40">🍹Нушокихои хунук</a></li>
+                        <li class="nav-item"><a class="nav-link text-dark fs-3" asp-area="" asp-controller="Orders" asp-action="OrderFood" asp-route-category="44">🍵 Нушокихои гарм</a></li>
+                        <li class="nav-item"><a class="nav-link text-dark fs-3" asp-area="" asp-controller="Orders" asp-action="OrderFood" asp-route-category="45">🍱 Комбо</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
             <main role="main" class="content pb-3">
                 @RenderBody()
             </main>

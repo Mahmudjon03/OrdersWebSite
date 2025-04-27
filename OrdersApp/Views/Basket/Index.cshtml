@@ -6,7 +6,7 @@
 <h2>Корзина</h2>
 
 <form asp-action="CreateOrderDetails" method="post">
-    <table class="table-container">
+    <table class="table-cart">
         <thead>
             <tr>
               
@@ -14,8 +14,10 @@
         </thead>
         <tbody class="fooddiv">
             @for (int i = 0; i < Model.Count; i++)
-            {
-                <tr>
+            {   
+
+                <tr class="item-table-cart"  data-product-id="@Model[i].ProductId">
+                   
                     <td>
                         <img class="imagesCart" src="~/image/@(Model[i].EnglishNameProd)@(Model[i].ProductId).png" alt="foto" />
                     </td>
@@ -35,8 +37,9 @@
                             <button class="minus-btn" type="button" onclick="changeQuantity(@i, 1)">+</button>
                         </div>
                     </td>
-                
+                    
                 </tr>
+              
             }
             <tr>
                 <td> <br class="bg-black" /> <br/> <br /> <br /> <br /> <br /> </td>
@@ -76,49 +79,71 @@
 
 
 <script>
-    let pendingDeleteIndex = null;
+    let pendingDeleteProductId = null;
 
     function changeQuantity(index, delta) {
         const input = document.getElementById('quantity-' + index);
         let value = parseInt(input.value) || 1;
 
         if (value <= 1 && delta === -1) {
-            pendingDeleteIndex = index;
+            const row = input.closest('tr');
+            pendingDeleteProductId = row.getAttribute('data-product-id');
+            console.log(pendingDeleteProductId);
             const modal = new bootstrap.Modal(document.getElementById('confirmDeleteModal'));
             modal.show();
             return;
         }
 
-        value += delta;
-        if (value < 1) value = 1;
+        if (delta === 1) {
+            const row = input.closest('tr');
+            prodId = row.getAttribute('data-product-id');
+            console.log(prodId);
+            fetch('/Basket/IncreaseQuantity', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'RequestVerificationToken': getAntiForgeryToken()
+                },
+                body: JSON.stringify({ productId: prodId })
+            })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        input.value = data.quantity; // обновляем input
+                        updateTotal();
+                    }
+                })
+                .catch(() => {
+                    alert('❌ Ошибка при увеличении количества.');
+                });
 
-        input.value = value;
-        updateTotal();
-        location.reload();
+            return; // чтобы ниже не обновляло локально вручную
+        }
     }
+
     document.getElementById('confirmDeleteBtn').addEventListener('click', function () {
-        if (pendingDeleteIndex !== null) {
+        if (pendingDeleteProductId !== null) {
             fetch('/Basket/RemoveFromCart', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                     'RequestVerificationToken': getAntiForgeryToken()
                 },
-                body: JSON.stringify({ index: pendingDeleteIndex })
+                body: JSON.stringify({ productId: pendingDeleteProductId })
             })
+                    
                 .then(response => response.json())
                 .then(data => {
                     if (data.success) {
-                      
-                       
                         updateTotal();
                         location.reload();
                     }
                 });
-
-            pendingDeleteIndex = null;
+            console.log(pendingDeleteProductId);
+            pendingDeleteProductId = null;
         }
     });
+
 
     function getAntiForgeryToken() {
         return document.querySelector('input[name="__RequestVerificationToken"]')?.value || '';
@@ -145,7 +170,7 @@ function updateTotal() {
     }
     const discount = parseInt(document.getElementById("discount").textContent) || 0;
 
-    console.log(discount);
+   
     const discountTotal = total * (1 - discount / 100);
     document.getElementById("total-amount").textContent = total.toFixed(2);
     document.getElementById("amount").textContent = discountTotal.toFixed(2);
