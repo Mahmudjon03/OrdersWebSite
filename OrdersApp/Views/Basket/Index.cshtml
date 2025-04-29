@@ -49,7 +49,7 @@
     <div class="bottomdiv">
         <div>
             <h6>Итого товаров: <span id="total-amount">@total</span></h6>
-            <h6>Скидка: <span id="discount">10</span>%</h6>
+            <h6>Скидка: <span id="discount">0</span>%</h6>
             <h4>Итого: <span id="amount"></span> $</h4>
         </div>
 
@@ -84,15 +84,40 @@
     function changeQuantity(index, delta) {
         const input = document.getElementById('quantity-' + index);
         let value = parseInt(input.value) || 1;
-
-        if (value <= 1 && delta === -1) {
+        if (delta === -1) {
+            if (value <= 1){
+                const row = input.closest('tr');
+                pendingDeleteProductId = row.getAttribute('data-product-id');
+                console.log(pendingDeleteProductId);
+                const modal = new bootstrap.Modal(document.getElementById('confirmDeleteModal'));
+                modal.show();
+                return;
+            }
             const row = input.closest('tr');
-            pendingDeleteProductId = row.getAttribute('data-product-id');
-            console.log(pendingDeleteProductId);
-            const modal = new bootstrap.Modal(document.getElementById('confirmDeleteModal'));
-            modal.show();
+            const prodId = row.getAttribute('data-product-id');
+
+            fetch('/Basket/DecreaseQuantity', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'RequestVerificationToken': getAntiForgeryToken()
+                },
+                body: JSON.stringify({ productId: prodId })
+            })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        input.value = data.quantity;
+                        updateTotal();
+                    }
+                })
+                .catch(() => {
+                    alert('❌ Ошибка при уменьшении количества.');
+                });
+
             return;
         }
+       
 
         if (delta === 1) {
             const row = input.closest('tr');

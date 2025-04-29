@@ -7,6 +7,9 @@
                 $(".snapcart").show();
                 $(".snapcart").text(count);
             }
+            else if (count <= 0) {
+                $(".snapcart").hide();
+            }
           
         },
         error: function () {
@@ -75,6 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     success: function (data) {
                         if (data.success) {
                             setButtonState(false);
+                            updateCartCount(); 
                         }
                     },
                     error: function () {
@@ -119,7 +123,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         const toastEl = document.getElementById('cartToast');
                         const toast = new bootstrap.Toast(toastEl);
                         toast.show();
-                         updateCartCount();  // Update cart item count (you should define this function)
+                        updateCartCount();  // Update cart item count (you should define this function)
                     },
                     error: function () {
                         alert("❌ Ошибка при добавлении в корзину.");

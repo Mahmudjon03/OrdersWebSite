@@ -100,7 +100,7 @@ namespace OrdersApp.Controllers
 
         [HttpPost]
 
-        public IActionResult IncreaseQuantity([FromBody]RemoveRequest prod)
+        public IActionResult IncreaseQuantity([FromBody] RemoveRequest prod)
         {
             var basket = HttpContext.Session.GetObjectFromJson<List<CartItem>>("Basket") ?? new List<CartItem>();
 
@@ -114,6 +114,22 @@ namespace OrdersApp.Controllers
 
             return Json(new { success = false });
         }
+        [HttpPost]
+        public IActionResult DecreaseQuantity([FromBody] RemoveRequest prod)
+        {
+            var basket = HttpContext.Session.GetObjectFromJson<List<CartItem>>("Basket") ?? new List<CartItem>();
+
+            var item = basket.FirstOrDefault(x => x.ProductId == prod.ProductId);
+            if (item != null && item.Quantity > 1)
+            {
+                item.Quantity--;
+                HttpContext.Session.SetObjectAsJson("Basket", basket);
+                return Json(new { success = true, quantity = item.Quantity });
+            }
+
+            return Json(new { success = false });
+        }
+
 
         [HttpPost]
         public IActionResult RemoveFromCart([FromBody] RemoveRequest product)
