@@ -26,6 +26,10 @@ namespace OrdersApp.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateOrderDetails(List<CartItem> model)
         {
+            if (model == null || model.Count == 0)
+            {
+                return BadRequest("Basket is empty");
+            }
             int orderId = await GetCurrentOrderId();
             var orders = new Order()
             {

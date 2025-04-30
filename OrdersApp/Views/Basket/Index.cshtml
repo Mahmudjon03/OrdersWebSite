@@ -9,15 +9,14 @@
     <table class="table-cart">
         <thead>
             <tr>
-              
             </tr>
         </thead>
         <tbody class="fooddiv">
             @for (int i = 0; i < Model.Count; i++)
-            {   
+            {
 
-                <tr class="item-table-cart"  data-product-id="@Model[i].ProductId">
-                   
+                <tr class="item-table-cart" data-product-id="@Model[i].ProductId">
+
                     <td>
                         <img class="imagesCart" src="~/image/@(Model[i].EnglishNameProd)@(Model[i].ProductId).png" alt="foto" />
                     </td>
@@ -31,19 +30,27 @@
                     </td>
 
                     <td>
+                       
                         <div class="quantitydiv">
                             <button class="plus-btn" type="button" onclick="changeQuantity(@i, -1)">−</button>
                             <input class="qululu" name="[@i].Quantity" id="quantity-@i" value="@Model[i].Quantity" type="number" min="1" onchange="updateTotal()" />
                             <button class="minus-btn" type="button" onclick="changeQuantity(@i, 1)">+</button>
                         </div>
+                        <div class="comment-container">
+                            <img class="comment" src="~/image/coment.png" alt="Комментировать" onclick="toggleCommentInput(@i)" />
+                            <div id="comment-input-@i" class="comment-input">
+                                <textarea name="[@i].Comment" placeholder="Добавьте комментарий..." rows="3"></textarea>
+                            </div>
+                        </div>
                     </td>
-                    
+
                 </tr>
-              
+
+
             }
             <tr>
-                <td> <br class="bg-black" /> <br/> <br /> <br /> <br /> <br /> </td>
-                </tr>
+                <td> <br class="bg-black" /> <br /> <br /> <br /> <br /> <br /> </td>
+            </tr>
         </tbody>
     </table>
     <div class="bottomdiv">
@@ -53,7 +60,31 @@
             <h4>Итого: <span id="amount"></span> $</h4>
         </div>
 
-    <button type="submit" class="butn btn btn-primary">Оформить заказ</button>
+        <button type="button" class="butn" onclick="openModal()">Оформить заказ</button>
+
+        <div id="myModal" class="modalokno">
+            <div class="modal-contentokno">
+                @if (Model.Count == 0)
+                {
+                    <h2 style="color:#979494; margin:20px;">
+                        Корзина пусто!
+                    </h2>
+                }
+                else
+                {
+                <h3>Вы уверены, что хотите оформить заказ?</h3>
+                  
+                }
+                <div class="zakazdiv" style="display:flex;">
+                    @if (Model.Count != 0)
+                    {
+                        <button class="btn btn-success btn-sm m-1" type="submit">Да, оформить</button>
+                    }
+                    <button class="btn btn-danger  btn-sm m-1" type="button" onclick="closeModal()">Отмена</button>
+                </div>
+            </div>
+        </div>
+
     </div>
 </form>
 
@@ -85,7 +116,7 @@
         const input = document.getElementById('quantity-' + index);
         let value = parseInt(input.value) || 1;
         if (delta === -1) {
-            if (value <= 1){
+            if (value <= 1) {
                 const row = input.closest('tr');
                 pendingDeleteProductId = row.getAttribute('data-product-id');
                 console.log(pendingDeleteProductId);
@@ -117,7 +148,7 @@
 
             return;
         }
-       
+
 
         if (delta === 1) {
             const row = input.closest('tr');
@@ -156,7 +187,7 @@
                 },
                 body: JSON.stringify({ productId: pendingDeleteProductId })
             })
-                    
+
                 .then(response => response.json())
                 .then(data => {
                     if (data.success) {
@@ -178,28 +209,28 @@
 
 
 <script>
-function updateTotal() {
-    let total = 0;
-    const count = @Model.Count;
+    function updateTotal() {
+        let total = 0;
+        const count = @Model.Count;
 
-    for (let i = 0; i < count; i++) {
-        const quantityInput = document.getElementById(`quantity-${i}`);
-        const priceSpan = document.getElementById(`price-${i}`);
+        for (let i = 0; i < count; i++) {
+            const quantityInput = document.getElementById(`quantity-${i}`);
+            const priceSpan = document.getElementById(`price-${i}`);
 
-        if (quantityInput && priceSpan) {
-            const quantity = parseInt(quantityInput.value) || 0;
-            const price = parseFloat(priceSpan.textContent) || 0;
+            if (quantityInput && priceSpan) {
+                const quantity = parseInt(quantityInput.value) || 0;
+                const price = parseFloat(priceSpan.textContent) || 0;
 
-            total += price * quantity;
+                total += price * quantity;
+            }
         }
-    }
-    const discount = parseInt(document.getElementById("discount").textContent) || 0;
+        const discount = parseInt(document.getElementById("discount").textContent) || 0;
 
-   
-    const discountTotal = total * (1 - discount / 100);
-    document.getElementById("total-amount").textContent = total.toFixed(2);
-    document.getElementById("amount").textContent = discountTotal.toFixed(2);
-}
+
+        const discountTotal = total * (1 - discount / 100);
+        document.getElementById("total-amount").textContent = total.toFixed(2);
+        document.getElementById("amount").textContent = discountTotal.toFixed(2);
+    }
 </script>
 
 

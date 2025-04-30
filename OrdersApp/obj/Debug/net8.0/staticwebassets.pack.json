@@ -17,6 +17,10 @@
       "PackagePath": "staticwebassets\\image\\Asal Choy55.png"
     },
     {
+      "Id": "C:\\Users\\User\\Desktop\\MyFinApp\\OrdersApp\\wwwroot\\image\\Ayran 200ml77.jpeg",
+      "PackagePath": "staticwebassets\\image\\Ayran 200ml77.jpeg"
+    },
+    {
       "Id": "C:\\Users\\User\\Desktop\\MyFinApp\\OrdersApp\\wwwroot\\image\\Choyi Turki54.png",
       "PackagePath": "staticwebassets\\image\\Choyi Turki54.png"
     },
@@ -85,12 +89,28 @@
       "PackagePath": "staticwebassets\\image\\Pilav + Tantuni (murg)63.png"
     },
     {
+      "Id": "C:\\Users\\User\\Desktop\\MyFinApp\\OrdersApp\\wwwroot\\image\\Pilavi Turki (murg)64.png",
+      "PackagePath": "staticwebassets\\image\\Pilavi Turki (murg)64.png"
+    },
+    {
       "Id": "C:\\Users\\User\\Desktop\\MyFinApp\\OrdersApp\\wwwroot\\image\\Pitstsa35.jpg",
       "PackagePath": "staticwebassets\\image\\Pitstsa35.jpg"
     },
     {
       "Id": "C:\\Users\\User\\Desktop\\MyFinApp\\OrdersApp\\wwwroot\\image\\Qayla39.jpg",
       "PackagePath": "staticwebassets\\image\\Qayla39.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\MyFinApp\\OrdersApp\\wwwroot\\image\\Rc-Cola 0,574.png",
+      "PackagePath": "staticwebassets\\image\\Rc-Cola 0,574.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\MyFinApp\\OrdersApp\\wwwroot\\image\\Rc-Cola 1,576.png",
+      "PackagePath": "staticwebassets\\image\\Rc-Cola 1,576.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\MyFinApp\\OrdersApp\\wwwroot\\image\\Rc-Cola 175.png",
+      "PackagePath": "staticwebassets\\image\\Rc-Cola 175.png"
     },
     {
       "Id": "C:\\Users\\User\\Desktop\\MyFinApp\\OrdersApp\\wwwroot\\image\\Sok34.jpg",
@@ -145,6 +165,10 @@
       "PackagePath": "staticwebassets\\image\\choy.jpg"
     },
     {
+      "Id": "C:\\Users\\User\\Desktop\\MyFinApp\\OrdersApp\\wwwroot\\image\\coment.png",
+      "PackagePath": "staticwebassets\\image\\coment.png"
+    },
+    {
       "Id": "C:\\Users\\User\\Desktop\\MyFinApp\\OrdersApp\\wwwroot\\image\\fanta.jpg",
       "PackagePath": "staticwebassets\\image\\fanta.jpg"
     },
@@ -155,6 +179,10 @@
     {
       "Id": "C:\\Users\\User\\Desktop\\MyFinApp\\OrdersApp\\wwwroot\\image\\limonchoy.jpg",
       "PackagePath": "staticwebassets\\image\\limonchoy.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\MyFinApp\\OrdersApp\\wwwroot\\image\\noimage.png",
+      "PackagePath": "staticwebassets\\image\\noimage.png"
     },
     {
       "Id": "C:\\Users\\User\\Desktop\\MyFinApp\\OrdersApp\\wwwroot\\image\\rs.jpg",

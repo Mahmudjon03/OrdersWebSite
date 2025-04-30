@@ -1,26 +1,25 @@
 ﻿html {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
     height: 100%;
     margin: 0;
-  
 }
 
 header {
@@ -29,36 +28,79 @@ header {
     width: 100%;
     z-index: 1000;
 }
-.container{
-    margin-top:100px;
-}
-.images {
-    width: 100%;
-    height: 200px; /* Mozhesh’ izmenit’ na 150px, 250px i t.d. */
-    object-fit: revert;
-    border-radius: 10px;
+
+.container {
+    margin-top: 100px;
 }
 
+
+
+
 .food-info {
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    height: 320px; 
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-content:space-between;
     padding: 10px;
-    margin: 10px 0;
-    text-align: left;
-    height: auto;
-    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background: white;
+   
 }
+
+.images {
+    width: 100%;
+    height: 55%;  
+    object-fit: revert;  
+    border-radius: 10px;
+    background: #f5f5f5;  
+}
+
+.texts {
+    margin: 8px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height:8%;
+
+}
+.centered-placeholder {
+    text-align: left; /* или right, в зависимости от ваших нужд */
+}
+
+    .centered-placeholder::placeholder {
+        text-align: center;
+    }
+
+.long-text {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.add-to-cart-form {
+    margin-top: auto;  
+    width: 100%;
+}
+
+.btn {
+  height:18%;
+}
+
+
 
 .texts {
     margin-top: 10px;
     font-size: 18px;
     font-weight: bold;
 }
-.imagesCart{
-    width:100px;
-    height:100px;
+
+.imagesCart {
+    width: 100px;
+    height: 100px;
 }
+
 .knopka {
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
     background-color: darkblue;
@@ -69,6 +111,7 @@ header {
     font-size: 15px;
     border: none;
 }
+
 .cart {
     width: 50px;
     height: 50px;
@@ -78,11 +121,12 @@ header {
     align-items: center;
     background-color: rgba(0, 255, 255, 0.1);
 }
+
 .imageKorzina {
     width: 40px;
     height: 40px;
 }
-/* Dlya mobil'nykh ustroĭstv */
+/*/* Dlya mobil'nykh ustroĭstv */
 @media (max-width: 768px) {
     .food-info {
         width: 50%;
@@ -145,6 +189,7 @@ a {
 }
 
 
+
 .snapcart {
     width: 20px;
     height: 17px;
@@ -157,8 +202,8 @@ a {
     left: 40px;
     font-weight: bold;
     text-align: center;
-    display:none;
- }
+    display: none;
+}
 
 .quantitydiv {
     display: flex;
@@ -206,18 +251,25 @@ a {
 .bottomdiv {
     width: 95%;
     height: 90px;
-    border:1px solid black;
+    border: 1px solid black;
     border-radius: 10px;
     position: fixed;
     bottom: 20px;
     z-index: 100;
     display: flex;
     justify-content: space-between;
-    background-color:white;
-    padding:10px;
+    background-color: white;
+    padding: 10px;
 }
+
+.butn {
+    background-color: dodgerblue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
 .table-container {
-   
     padding-bottom: 200px; /* чтобы последние строки не скрывались за нижним блоком */
 }
 
@@ -238,10 +290,10 @@ a {
 .item-table-cart {
     background-color: #ffffff;
     border-radius: 10px;
-    overflow:scroll;
-
+    overflow: scroll;
     box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
 }
+
 tbody tr td:first-child {
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
@@ -251,24 +303,25 @@ tbody tr td:last-child {
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
 }
-    .cart-div {
-        width: 90%;
-        border-radius: 5px;
-        box-shadow: red 10px 10px inset;
-        overflow: hidden;
-    }
+
+.cart-div {
+    width: 90%;
+    border-radius: 5px;
+    box-shadow: red 10px 10px inset;
+    overflow: hidden;
+}
 
 
 
 
 .burger {
-  width: 30px;
-  height: 22px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  cursor: pointer;
-  z-index: 1000;
+    width: 30px;
+    height: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    z-index: 1000;
 }
 
     .burger div {
@@ -279,47 +332,172 @@ tbody tr td:last-child {
         transition: 0.3s;
     }
 
-.burger.active div:nth-child(1) {
-  transform: rotate(50deg) translate(5px, 7px);
-}
+    .burger.active div:nth-child(1) {
+        transform: rotate(50deg) translate(5px, 7px);
+    }
 
-.burger.active div:nth-child(2) {
-  opacity: 0;
-}
+    .burger.active div:nth-child(2) {
+        opacity: 0;
+    }
 
-.burger.active div:nth-child(3) {
-  transform: rotate(-50deg) translate(5px, -7px);
-}
+    .burger.active div:nth-child(3) {
+        transform: rotate(-50deg) translate(5px, -7px);
+    }
 
 .sidebar {
     z-index: 200;
     position: fixed;
     top: 0;
     right: -400px;
-    width: 70%;
+    width: 60%;
     height: 100%;
     background-color: white;
     padding-top: 70px;
-    transition: right 0.3s ease;
+    transition: right 0.5s ease;
 }
 
-.sidebar.active {
-  right: 0;
-}
-.sidebar ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+    .sidebar.active {
+        right: 0;
+    }
+
+    .sidebar ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+        .sidebar ul li {
+            text-align: start;
+            height: 55px;
+            font-family: Bahnschrift;
+            transition: background-color 0.3s ease;
+            display:flex;
+            align-content:center;
+            justify-content:start;/* Плавный переход */
+        }
+
+            .sidebar ul li:hover {
+                background-color:aqua;
+            }
+
+            .sidebar ul li a {
+                color: black;
+                text-decoration: none;
+                font-size: 20px;
+                display: flex;
+                align-content: center;
+                justify-content:center;
+               padding:10px;
+            }
+
+
+.modalokno {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
-.sidebar ul li {
-  text-align: start;
-  margin: 20px 0;
+    .modalokno.show {
+        opacity: 1;
+        visibility: visible;
+    }
+
+.modal-contentokno {
+    background-color: #fff;
+    padding: 20px;
+    width: 90%;
+    border-radius: 10px;
+    text-align: center;
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
 }
 
-.sidebar ul li a {
-  color: black;
-  text-decoration: none;
-  font-size: 20px;
-  display: block;
+.modalokno.show .modal-contentokno {
+    transform: scale(1);
 }
+
+.zakazdiv {
+    display: flex;
+    justify-content: end;
+}
+
+.divcheck {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+   
+}
+
+.check1 {
+    text-align: start;
+    width: 45%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 12px;
+}
+
+.check2,
+.check3,
+.check4 {
+    text-align: start;
+    padding-left: 5px;
+    align-items: start;
+    width: 15%;
+    font-size:12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.comment {
+    width: 18px;
+    height: 15px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    margin-left:80%;
+}
+
+    .comment:hover {
+        transform: scale(1.1);
+    }
+
+.comment-input {
+    overflow: hidden;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    max-height: 0;
+    opacity: 0;
+    margin-top: 10px;
+}
+
+    .comment-input textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 40px;
+        font-family: inherit;
+        font-size: 14px;
+        resize: none;
+        min-height: 60px;
+        transition: border-color 0.3s;
+    }
+
+        .comment-input textarea:focus {
+            border-color: #4a90e2;
+            outline: none;
+            box-shadow: 0 0 0 4px rgba(74, 144, 226, 0.2);
+        }
+
+        .comment-input textarea::placeholder {
+            color: #999;
+        }

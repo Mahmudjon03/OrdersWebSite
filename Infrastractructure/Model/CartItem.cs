@@ -1,4 +1,5 @@
 ﻿using RestaurantLibrary.Helpers;
+using System.Runtime.CompilerServices;
 
 namespace Domain.Models
 {
@@ -10,7 +11,7 @@ namespace Domain.Models
              return TransliterationHelper.CyrillicToLatin(ProductName);
             }
         }
-
+        public string Comment { get; set; }
         public decimal Price { get; set; }
         public int Quantity { get; set; }
     }

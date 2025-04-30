@@ -177,3 +177,36 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
+
+function openModal() {
+
+    document.getElementById("myModal").classList.add("show");
+}
+
+    function closeModal() {
+        document.getElementById("myModal").classList.remove("show");
+}
+
+//action for open comment food
+function toggleCommentInput(index) {
+    var commentInput = document.getElementById('comment-input-' + index);
+
+    if (commentInput.style.maxHeight) {
+        // Закрываем
+        commentInput.style.maxHeight = null;
+        commentInput.style.opacity = '0';
+        setTimeout(() => {
+            commentInput.style.display = 'none';
+        }, 300); // Должно совпадать с временем transition
+    } else {
+        // Открываем
+        commentInput.style.display = 'block';
+        setTimeout(() => {
+            commentInput.style.maxHeight = commentInput.scrollHeight + 'px';
+            commentInput.style.opacity = '1';
+        }, 10);
+    }
+}
+
+

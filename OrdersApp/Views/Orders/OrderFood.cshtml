@@ -7,11 +7,15 @@
         @foreach (var food in Model)
         {
             <div class="col-6 col-md-4 mb-4 food-info">
-                <img class="images product-img" src="~/image/@($"{food.prod_inglish_name}{food.prod_id}.png")" alt="foto"
+                <img class="images product-img"
+                     src="~/image/@($"{food.prod_inglish_name}{food.prod_id}.png")"
+                     alt=""
                      style="cursor:pointer"
-                     data-bs-toggle="modal" data-bs-target="#tantuniModal.@food.prod_id" />
-                <h4 class="texts">@food.prod_name</h4>
-                <h5 class="texts">@food.prod_price </h5>
+                     onerror="this.onerror=null;this.src='@Url.Content("~/image/noimage.png")';"
+                     data-bs-toggle="modal"
+                     data-bs-target="#tantuniModal.@food.prod_id" />
+                <h5 class="texts" title="@food.prod_name"> @food.prod_name</h5>
+                <h6 class="texts">@food.prod_price </h6>
                 <div style="display:flex">
                     <form class="add-to-cart-form" method="post" data-product-id="@food.prod_id">
                         <input type="hidden" name="id" value="@food.prod_id" />
