@@ -149,6 +149,30 @@ namespace OrdersApp.Controllers
 
             return Json(new { success = true });
         }
+
+        [HttpPost]
+
+        public IActionResult SetQuantity([FromBody] SetQuantityRequest request)
+        {
+
+            if (request.Quantity < 1) request.Quantity = 1;
+
+            var baskets = HttpContext.Session.GetObjectFromJson<List<CartItem>>("Basket") ?? new List<CartItem>();
+
+            var basket = baskets.FirstOrDefault(item => item.ProductId == request.ProductId);
+            if (basket != null)
+            {
+                basket.Quantity = request.Quantity;
+                HttpContext.Session.SetObjectAsJson("Basket", baskets);
+            }
+            return Json(new { success = true, quantity = request.Quantity });
+        }
+
+        public class SetQuantityRequest
+        {
+            public int ProductId { get; set; }
+            public int Quantity { get; set; }
+        }
         public class RemoveRequest
         {
             public int ProductId { get; set; }

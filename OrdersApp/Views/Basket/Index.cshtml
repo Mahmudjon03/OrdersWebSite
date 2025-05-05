@@ -3,9 +3,41 @@
 @{
     decimal total = 0;
 }
-<h2>Корзина</h2>
+
+<h2 class="carts">Корзина</h2>
 
 <form asp-action="CreateOrderDetails" method="post">
+    <div class="bottomdiv_zagal">
+
+        <h6>Итого товаров: <span id="total-amount">@total</span></h6>
+
+        <button type="button" class="butn_zagal btn btn-primary" onclick="openModal()">Оформить заказ</button>
+
+        <div id="myModal" class="modalokno">
+            <div class="modal-contentokno">
+                @if (Model.Count == 0)
+                {
+                    <h2 style="color:#979494; margin:20px;">
+                        Корзина пусто!
+                    </h2>
+                }
+                else
+                {
+                    <h3>Вы уверены, что хотите оформить заказ?</h3>
+
+                }
+                <div class="zakazdiv" style="display:flex;">
+                    @if (Model.Count != 0)
+                    {
+                        <button class="btn btn-success btn-sm m-1" type="submit">Да, оформить</button>
+                    }
+                    <button class="btn btn-danger  btn-sm m-1" type="button" onclick="closeModal()">Отмена</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
     <table class="table-cart">
         <thead>
             <tr>
@@ -18,7 +50,10 @@
                 <tr class="item-table-cart" data-product-id="@Model[i].ProductId">
 
                     <td>
-                        <img class="imagesCart" src="~/image/@(Model[i].EnglishNameProd)@(Model[i].ProductId).png" alt="foto" />
+                        <img class="imagesCart" src="~/image/@(Model[i].EnglishNameProd)@(Model[i].ProductId).png"
+                             style="cursor:pointer"
+                             onerror="this.onerror=null;this.src='@Url.Content("~/image/noimage.png")';" 
+                             alt="foto" />
                     </td>
                     <td>
 
@@ -33,31 +68,31 @@
                        
                         <div class="quantitydiv">
                             <button class="plus-btn" type="button" onclick="changeQuantity(@i, -1)">−</button>
-                            <input class="qululu" name="[@i].Quantity" id="quantity-@i" value="@Model[i].Quantity" type="number" min="1" onchange="updateTotal()" />
+                            <input class="qululu" name="[@i].Quantity" id="quantity-@i" value="@Model[i].Quantity" type="number" min="1" onchange="updateTotal()" onblur="manualQuantityChange(@i)" />
                             <button class="minus-btn" type="button" onclick="changeQuantity(@i, 1)">+</button>
                         </div>
                         <div class="comment-container">
-                            <img class="comment" src="~/image/coment.png" alt="Комментировать" onclick="toggleCommentInput(@i)" />
+                            <img class="comment" src="~/image/coment.png" alt=""
+                            onclick="toggleCommentInput(@i)" />
+                        </div>
                             <div id="comment-input-@i" class="comment-input">
                                 <textarea name="[@i].Comment" placeholder="Добавьте комментарий..." rows="3"></textarea>
                             </div>
-                        </div>
                     </td>
 
                 </tr>
 
 
             }
-            <tr>
-                <td> <br class="bg-black" /> <br /> <br /> <br /> <br /> <br /> </td>
-            </tr>
+            
+          
         </tbody>
     </table>
     <div class="bottomdiv">
-        <div>
-            <h6>Итого товаров: <span id="total-amount">@total</span></h6>
-            <h6>Скидка: <span id="discount">0</span>%</h6>
-            <h4>Итого: <span id="amount"></span> $</h4>
+        <div class="div_itog">
+            <h6 class="h6_div_itog">Итого товаров: <span id="total-amount">@total</span></h6>
+            <h6>Скидка: <span id="discount">0</span></h6>
+            <h4>Итого: <span id="amount"></span></h4>
         </div>
 
         <button type="button" class="butn" onclick="openModal()">Оформить заказ</button>
@@ -72,8 +107,8 @@
                 }
                 else
                 {
-                <h3>Вы уверены, что хотите оформить заказ?</h3>
-                  
+                    <h3>Вы уверены, что хотите оформить заказ?</h3>
+
                 }
                 <div class="zakazdiv" style="display:flex;">
                     @if (Model.Count != 0)
@@ -85,10 +120,10 @@
             </div>
         </div>
 
-    </div>
-</form>
+    </dxiv>
+    
 
-
+   
 <div class="modal fade" id="confirmDeleteModal" tabindex="-1" aria-labelledby="confirmDeleteLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -106,6 +141,40 @@
         </div>
     </div>
 </div>
+</form>
+<script>
+    function checkCartVisibility() {
+        const zagal = document.querySelector('.bottomdiv_zagal');
+        const bottom = document.querySelector('.bottomdiv');
+
+        const doc = document.documentElement;
+        const hasScroll = doc.scrollHeight > doc.clientHeight;
+
+        if (!hasScroll) {
+            // Нет скролла — скрыть фиксированную корзину
+            zagal.style.opacity = '0';
+            zagal.style.pointerEvents = 'none';
+            return;
+        }
+
+        // Есть скролл — применяем обычную проверку
+        const bottomRect = bottom.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+        const visibleHeight = windowHeight - bottomRect.top;
+
+        if (visibleHeight >= 30) {
+            zagal.style.opacity = '0';
+            zagal.style.pointerEvents = 'none';
+        } else {
+            zagal.style.opacity = '1';
+            zagal.style.pointerEvents = 'auto';
+        }
+    }
+
+    window.addEventListener('scroll', checkCartVisibility);
+    window.addEventListener('resize', checkCartVisibility);
+    window.addEventListener('load', checkCartVisibility);
+</script>
 
 
 
@@ -175,6 +244,38 @@
 
             return; // чтобы ниже не обновляло локально вручную
         }
+    }
+    function manualQuantityChange(index) {
+        const input = document.getElementById('quantity-' + index);
+        let value = parseInt(input.value);
+        if (isNaN(value) || value < 1) {
+            value = 1;
+            input.value = 1;
+        }
+
+        const row = input.closest('tr');
+        const prodId = row.getAttribute('data-product-id');
+
+        fetch('/Basket/SetQuantity', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'RequestVerificationToken': getAntiForgeryToken()
+            },
+            body: JSON.stringify({ productId: prodId, quantity: value })
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    input.value = data.quantity; // Вдруг сервер скорректировал
+                    updateTotal();
+                } else {
+                    alert('❌ Не удалось обновить количество.');
+                }
+            })
+            .catch(() => {
+                alert('❌ Ошибка при обновлении количества.');
+            });
     }
 
     document.getElementById('confirmDeleteBtn').addEventListener('click', function () {

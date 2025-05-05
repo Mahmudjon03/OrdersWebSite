@@ -39,7 +39,10 @@
                         </div>
                         <div class="modal-body text-center">
 
-                            <img src ="~/image/@($"{food.prod_inglish_name}{food.prod_id}.png")" alt="Tantuni" class="img-fluid rounded mb-2 w-75 h-75" style="max-height: 300px;" />
+                            <img src ="~/image/@($"{food.prod_inglish_name}{food.prod_id}.png")"
+                                 style="cursor:pointer"
+                                 onerror="this.onerror=null;this.src='@Url.Content("~/image/noimage.png")';"
+                                 alt="Tantuni" class="img-fluid rounded mb-2 w-75 h-75" style="max-height: 300px;" />
 
 
                             <p>@food.prod_name</p>
