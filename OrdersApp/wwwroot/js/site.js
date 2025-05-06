@@ -184,7 +184,7 @@ function openModal() {
     document.getElementById("myModal").classList.add("show");
 }
 
-    function closeModal() {
+function closeModal() {
         document.getElementById("myModal").classList.remove("show");
 }
 

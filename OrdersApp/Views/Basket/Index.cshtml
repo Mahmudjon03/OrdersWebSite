@@ -6,36 +6,12 @@
 
 <h2 class="carts">Корзина</h2>
 
-<form asp-action="CreateOrderDetails" method="post">
+<form asp-action="CreateOrderDetails" method="post" class="page-container">
     <div class="bottomdiv_zagal">
 
-        <h6>Итого товаров: <span id="total-amount">@total</span></h6>
+        <h6>Итого товаров: <span id="total-amount-1">@total</span></h6>
 
         <button type="button" class="butn_zagal btn btn-primary" onclick="openModal()">Оформить заказ</button>
-
-        <div id="myModal" class="modalokno">
-            <div class="modal-contentokno">
-                @if (Model.Count == 0)
-                {
-                    <h2 style="color:#979494; margin:20px;">
-                        Корзина пусто!
-                    </h2>
-                }
-                else
-                {
-                    <h3>Вы уверены, что хотите оформить заказ?</h3>
-
-                }
-                <div class="zakazdiv" style="display:flex;">
-                    @if (Model.Count != 0)
-                    {
-                        <button class="btn btn-success btn-sm m-1" type="submit">Да, оформить</button>
-                    }
-                    <button class="btn btn-danger  btn-sm m-1" type="button" onclick="closeModal()">Отмена</button>
-                </div>
-            </div>
-        </div>
-
     </div>
 
     <table class="table-cart">
@@ -48,49 +24,63 @@
             {
 
                 <tr class="item-table-cart" data-product-id="@Model[i].ProductId">
-
                     <td>
-                        <img class="imagesCart" src="~/image/@(Model[i].EnglishNameProd)@(Model[i].ProductId).png"
-                             style="cursor:pointer"
-                             onerror="this.onerror=null;this.src='@Url.Content("~/image/noimage.png")';" 
-                             alt="foto" />
-                    </td>
-                    <td>
+                        <div class="td-grid">
+                            <!-- Первая строка грида -->
+                            <div class="top-content">
+                                <div style="display:flex; width:100%">
+                                    <img class="imagesCart" src="~/image/@(Model[i].EnglishNameProd)@(Model[i].ProductId).png"
+                                         style="cursor:pointer"
+                                         onerror="this.onerror=null;this.src='@Url.Content("~/image/noimage.png")';"
+                                         alt="foto" />
 
-                        <h5>@Model[i].ProductName</h5>
-                        <p>Цена <span id="price-@i">@Model[i].Price</span> $</p>
-                        <input type="hidden" name="[@i].ProductName" value="@Model[i].ProductName" />
-                        <input type="hidden" name="[@i].ProductId" value="@Model[i].ProductId" />
-                        <input type="hidden" name="[@i].Price" value="@Model[i].Price" />
-                    </td>
+                                    <div class="name-food-cart">
+                                        <h5>@Model[i].ProductName</h5>
+                                        <p>Цена <span id="price-@i">@Model[i].Price</span> $</p>
 
-                    <td>
-                       
-                        <div class="quantitydiv">
-                            <button class="plus-btn" type="button" onclick="changeQuantity(@i, -1)">−</button>
-                            <input class="qululu" name="[@i].Quantity" id="quantity-@i" value="@Model[i].Quantity" type="number" min="1" onchange="updateTotal()" onblur="manualQuantityChange(@i)" />
-                            <button class="minus-btn" type="button" onclick="changeQuantity(@i, 1)">+</button>
-                        </div>
-                        <div class="comment-container">
-                            <img class="comment" src="~/image/coment.png" alt=""
-                            onclick="toggleCommentInput(@i)" />
-                        </div>
-                            <div id="comment-input-@i" class="comment-input">
-                                <textarea name="[@i].Comment" placeholder="Добавьте комментарий..." rows="3"></textarea>
+                                        <input type="hidden" name="[@i].ProductName" value="@Model[i].ProductName" />
+                                        <input type="hidden" name="[@i].ProductId" value="@Model[i].ProductId" />
+                                        <input type="hidden" name="[@i].Price" value="@Model[i].Price" />
+                                    </div>
+                                    <div class="divskiy">
+                                        <div class="quantitydiv">
+                                            <button class="plus-btn" type="button" onclick="changeQuantity(@i, -1)">−</button>
+                                            <input class="qululu" name="[@i].Quantity" id="quantity-@i" value="@Model[i].Quantity"
+                                                   type="number" min="1" onchange="updateTotal()" onblur="manualQuantityChange(@i)" />
+                                            <button class="minus-btn" type="button" onclick="changeQuantity(@i, 1)">+</button>
+
+                                        </div>
+                                        <div class="comment-container" style="height:20px; margin-left:90%;">
+                                            <img class="comment" src="~/image/coment.png" alt=""
+                                                 onclick="toggleCommentInput(@i)" />
+                                        </div>
+                                    </div>
+
+                                </div>
                             </div>
+
+                            <!-- Вторая строка грида — только textarea -->
+                            <div class="comment-row">
+                                <div id="comment-input-@i" class="comment-input">
+                                    <textarea name="[@i].Comment" placeholder="Добавьте комментарий..." rows="3"></textarea>
+                                </div>
+                            </div>
+                        </div>
                     </td>
+
 
                 </tr>
 
 
             }
-            
-          
+
+
         </tbody>
     </table>
+
     <div class="bottomdiv">
         <div class="div_itog">
-            <h6 class="h6_div_itog">Итого товаров: <span id="total-amount">@total</span></h6>
+            <h6 class="h6_div_itog">Итого товаров: <span id="total-amount-2">@total</span></h6>
             <h6>Скидка: <span id="discount">0</span></h6>
             <h4>Итого: <span id="amount"></span></h4>
         </div>
@@ -120,28 +110,29 @@
             </div>
         </div>
 
-    </dxiv>
-    
+    </div>
 
-   
-<div class="modal fade" id="confirmDeleteModal" tabindex="-1" aria-labelledby="confirmDeleteLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="confirmDeleteLabel">Удалить товар</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
-            </div>
-            <div class="modal-body">
-                Вы уверены, что хотите удалить этот товар?
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Нет</button>
-                <button type="button" class="btn btn-danger" id="confirmDeleteBtn">Да, удалить</button>
+
+
+    <div class="modal fade" id="confirmDeleteModal" tabindex="-1" aria-labelledby="confirmDeleteLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="confirmDeleteLabel">Удалить товар</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                </div>
+                <div class="modal-body">
+                    Вы уверены, что хотите удалить этот товар?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Нет</button>
+                    <button type="button" class="btn btn-danger" id="confirmDeleteBtn">Да, удалить</button>
+                </div>
             </div>
         </div>
     </div>
-</div>
 </form>
+
 <script>
     function checkCartVisibility() {
         const zagal = document.querySelector('.bottomdiv_zagal');
@@ -329,7 +320,8 @@
 
 
         const discountTotal = total * (1 - discount / 100);
-        document.getElementById("total-amount").textContent = total.toFixed(2);
+        document.getElementById("total-amount-1").textContent = total.toFixed(2);
+        document.getElementById("total-amount-2").textContent = total.toFixed(2);
         document.getElementById("amount").textContent = discountTotal.toFixed(2);
     }
 </script>
