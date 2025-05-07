@@ -182,6 +182,16 @@ header {
     .image-title {
         font-size: 12px;
     }
+    .position-fixed.top-0.end-0.p-3 {
+        left: 75%;
+        right: 0px;
+        top: 80px;
+        transform: translateX(-50%);
+        width: 60%;
+        text-align:center;
+        max-width: 200px;
+        font-size:14px;
+    }
 }
 
 a {
@@ -399,41 +409,12 @@ tbody tr td:last-child {
             }
 
 
-.modalokno {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.4);
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-}
-
-    .modalokno.show {
-        opacity: 1;
-        visibility: visible;
-    }
-
-.modal-contentokno {
+.modalokno .modal-content {
+    /* Custom styles for modal-contentokno */
     background-color: #fff;
-    padding: 20px;
-    width: 90%;
-    border-radius: 10px;
-    text-align: center;
-    transform: scale(0.9);
-    transition: transform 0.3s ease;
+    border-radius: 0.3rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 }
-
-.modalokno.show .modal-contentokno {
-    transform: scale(1);
-}
-
 .zakazdiv {
     display: flex;
     justify-content: end;
@@ -577,4 +558,10 @@ tbody tr td:last-child {
 .name-food-cart{
     padding:5px;
     width:35%;
+}
+.sidebar .lili a.active {
+    background-color: #f0f0f0;
+    color: #333;
+    font-weight: bold;
+    width:100%;
 }

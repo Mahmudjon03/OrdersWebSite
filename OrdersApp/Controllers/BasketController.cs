@@ -44,7 +44,7 @@ namespace OrdersApp.Controllers
                 order_payment = 1,
                 order_status = 1,
                 order_status_cook = (int)EnumDetailsStatus.Ready,
-                order_comment = "mesage",
+                order_comment = "",
                 order_discount = 1.2
             };
             var result = await new Order().OnInsertAsync(orders);
@@ -58,7 +58,7 @@ namespace OrdersApp.Controllers
                     details_order = orderId,
                     details_prod = i.ProductId,
                     details_count = i.Quantity,
-                    details_comment = "comment",
+                    details_comment = i.Comment,
                     details_status = (int)EnumDetailsStatus.New,
                 };
                 var result2 = await dbDetails.OnInsertAsync(detail);
@@ -151,8 +151,7 @@ namespace OrdersApp.Controllers
         }
 
         [HttpPost]
-
-        public IActionResult SetQuantity([FromBody] SetQuantityRequest request)
+        public IActionResult SetQuantity([FromBody] RemoveRequest request)
         {
 
             if (request.Quantity < 1) request.Quantity = 1;
@@ -167,16 +166,48 @@ namespace OrdersApp.Controllers
             }
             return Json(new { success = true, quantity = request.Quantity });
         }
+        [HttpPost]
+        public IActionResult SetComment([FromBody] RemoveRequest request)
+            {
+            // Validate input
+            if (request.ProductId == 0)
+            {
+                return Json(new { success = false, message = "Product ID is required." });
+            }
 
-        public class SetQuantityRequest
-        {
-            public int ProductId { get; set; }
-            public int Quantity { get; set; }
+            
+            request.Comment = request.Comment?.Trim() ?? "";
+            if (request.Comment.Length > 500) 
+            {
+                request.Comment = request.Comment.Substring(0, 500);
+            }
+
+            // Get basket from session
+            var baskets = HttpContext.Session.GetObjectFromJson<List<CartItem>>("Basket") ?? new List<CartItem>();
+            // Find the item
+            var basket = baskets.FirstOrDefault(item => item.ProductId == request.ProductId);
+            if (basket != null)
+            {
+                // Update comment
+                basket.Comment = request.Comment;
+                // Save updated basket to session
+                HttpContext.Session.SetObjectAsJson("Basket", baskets);
+               
+            }
+            else
+            {
+                return Json(new { success = false, message = "Product not found in cart." });
+            }
+
+            return Json(new { success = true, comment = request.Comment });
         }
         public class RemoveRequest
         {
             public int ProductId { get; set; }
+            public int Quantity { get; set; }
+            public string Comment { get; set; }
         }
+       
 
     }
 }

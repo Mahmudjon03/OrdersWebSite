@@ -122,7 +122,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         setButtonState(true);
                         const toastEl = document.getElementById('cartToast');
                         const toast = new bootstrap.Toast(toastEl);
-                        toast.show();
+                        showCartToast();
                         updateCartCount();  // Update cart item count (you should define this function)
                     },
                     error: function () {
@@ -180,12 +180,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 function openModal() {
-
-    document.getElementById("myModal").classList.add("show");
+    const modal = document.getElementById("myModal");
+    const bootstrapModal = new bootstrap.Modal(modal);
+    bootstrapModal.show();
 }
 
 function closeModal() {
-        document.getElementById("myModal").classList.remove("show");
+    const modal = document.getElementById('myModal');
+    const bootstrapModal = bootstrap.Modal.getInstance(modal);
+    bootstrapModal.hide();
 }
 
 //action for open comment food
@@ -209,4 +212,35 @@ function toggleCommentInput(index) {
     }
 }
 
+const toastEl = document.getElementById('cartToast');
+const toast = new bootstrap.Toast(toastEl, {
+    delay: 1000, // Reduced to 1 second
+    autohide: true
+});
+function showCartToast() {
+    toast.show();
+}
 
+function setActiveCategory(element) {
+    // Удаляем класс active у всех элементов
+    document.querySelectorAll('#sidebar .lili a').forEach(item => {
+        item.classList.remove('active');
+    });
+
+    // Добавляем класс active к выбранному элементу
+    element.classList.add('active');
+
+    // Сохраняем выбранную категорию в localStorage
+    localStorage.setItem('lastActiveCategory', element.getAttribute('href'));
+}
+
+// При загрузке страницы проверяем сохраненную категорию
+document.addEventListener('DOMContentLoaded', function () {
+    const lastActiveCategory = localStorage.getItem('lastActiveCategory');
+    if (lastActiveCategory) {
+        const activeElement = document.querySelector(`#sidebar .lili a[href="${lastActiveCategory}"]`);
+        if (activeElement) {
+            activeElement.classList.add('active');
+        }
+    }
+});
