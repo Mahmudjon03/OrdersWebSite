@@ -11,7 +11,7 @@
 
         <h6>Итого товаров: <span id="total-amount-1">@total</span></h6>
 
-        <button type="button" class="butn_zagal btn btn-primary" onclick="openModal()">Оформить заказ</button>
+        <button type="button" class="butn_zagal" onclick="openModal()">Оформить заказ</button>
     </div>
 
     <table class="table-cart">
@@ -23,7 +23,7 @@
             @for (int i = 0; i < Model.Count; i++)
             {
 
-                <tr class="item-table-cart" data-product-id="@Model[i].ProductId">
+                <tr class="item-table-cart" data-product-id="@Model[i].ProductId" data-product-name="@Model[i].ProductName">
                     <td>
                         <div class="td-grid">
                             <!-- Первая строка грида -->
@@ -50,7 +50,11 @@
                                             <button class="minus-btn" type="button" onclick="changeQuantity(@i, 1)">+</button>
 
                                         </div>
-                                        <div class="comment-container" style="height:20px; margin-left:90%;">
+                                        <div class="comment-container" style="height:20px; margin-left:63%;">
+
+                                            <img class="comment" src="~/image/trash.png" alt=""
+                                                 onclick="confirmDelete(@i)" />
+
                                             <img class="comment" src="~/image/coment.png" alt=""
                                                  onclick="toggleCommentInput(@i)" />
                                         </div>
@@ -72,8 +76,7 @@
 
 
                 </tr>
-
-
+            
             }
 
 
@@ -105,7 +108,7 @@
                         }
                         else
                         {
-                            <h3>Вы уверены, что хотите оформить заказ?</h3>
+                            <p> Вы уверены, что хотите оформить заказ?</p>
                         }
                     </div>
                     <div class="modal-footer">
@@ -131,8 +134,9 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
                 </div>
                 <div class="modal-body">
-                    Вы уверены, что хотите удалить этот товар?
+                    Вы уверены, что хотите удалить <span class="name-prod"></span>?
                 </div>
+             
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Нет</button>
                     <button type="button" class="btn btn-danger" id="confirmDeleteBtn">Да, удалить</button>
@@ -188,7 +192,8 @@
             if (value <= 1) {
                 const row = input.closest('tr');
                 pendingDeleteProductId = row.getAttribute('data-product-id');
-                console.log(pendingDeleteProductId);
+                const productName = row.getAttribute('data-product-name');
+                document.querySelector('#confirmDeleteModal .name-prod').textContent = productName;
                 const modal = new bootstrap.Modal(document.getElementById('confirmDeleteModal'));
                 modal.show();
                 return;
@@ -244,6 +249,14 @@
 
             return; // чтобы ниже не обновляло локально вручную
         }
+    }
+    function confirmDelete(index) {
+        const row = document.getElementById('quantity-' + index).closest('tr');
+        pendingDeleteProductId = row.getAttribute('data-product-id');
+        const productName = row.getAttribute('data-product-name');
+        document.querySelector('#confirmDeleteModal .name-prod').textContent = productName;
+        const modal = new bootstrap.Modal(document.getElementById('confirmDeleteModal'));
+        modal.show();
     }
 
     function saveComment(index) {

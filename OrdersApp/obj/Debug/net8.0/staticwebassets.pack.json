@@ -221,6 +221,10 @@
       "PackagePath": "staticwebassets\\image\\tantuni3.jpg"
     },
     {
+      "Id": "C:\\Users\\User\\Desktop\\MyFinApp\\OrdersApp\\wwwroot\\image\\trash.png",
+      "PackagePath": "staticwebassets\\image\\trash.png"
+    },
+    {
       "Id": "C:\\Users\\User\\Desktop\\MyFinApp\\OrdersApp\\wwwroot\\image\\xodog.jpg",
       "PackagePath": "staticwebassets\\image\\xodog.jpg"
     },

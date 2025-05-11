@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "+USidG4+RNoYTbmi5SijUu7tRZ55NUPTOY9lBe1iv9s=",
+  "Hash": "+udHYXPc7UhWW4R+UCFc2HZbeE8BwF/9jamt4FTMNq8=",
   "Source": "OrdersApp",
   "BasePath": "_content/OrdersApp",
   "Mode": "Default",
@@ -1060,6 +1060,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\image\\Tombik - Doner (gov)70.png"
+    },
+    {
+      "Identity": "C:\\Users\\User\\Desktop\\MyFinApp\\OrdersApp\\wwwroot\\image\\trash.png",
+      "SourceId": "OrdersApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\MyFinApp\\OrdersApp\\wwwroot\\",
+      "BasePath": "_content/OrdersApp",
+      "RelativePath": "image/trash.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\image\\trash.png"
     },
     {
       "Identity": "C:\\Users\\User\\Desktop\\MyFinApp\\OrdersApp\\wwwroot\\image\\Vse29.png",

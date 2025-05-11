@@ -84,10 +84,12 @@ header {
     width: 100%;
 }
 
-.btn {
-  height:18%;
-}
 
+.butn_zagal {
+    height: 18%;
+    width:25%;
+    background-color: #009fcb;
+}
 
 
 .texts {
@@ -216,6 +218,7 @@ a {
 }
 
 .quantitydiv {
+    width:100%;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -223,12 +226,12 @@ a {
 }
 
     .quantitydiv button {
-        background-color: #4A90E2;
+        background-color: #009fcb;
         color: white;
         border: none;
         padding: 5px 10px;
         font-size: 18px;
-        border-radius: 8px;
+        border-radius: 18px;
         cursor: pointer;
         transition: 0.3s;
     }
@@ -238,12 +241,12 @@ a {
         }
 
 .qululu {
-    width: 60px;
+    width: 45px;
     text-align: center;
     font-size: 15px;
     padding: 5px;
-    border-radius: 8px;
-    border: 2px solid #4A90E2;
+    border-radius: 18px;
+    border: 1.5px solid #009fcb;
 }
 
     /* Убираем стрелки (опционально) */
@@ -450,9 +453,11 @@ tbody tr td:last-child {
 }
 
 .comment {
+    display:inline;
     width: 18px;
     height: 15px;
     cursor: pointer;
+    margin:1px;
     transition: transform 0.2s;
    }
 

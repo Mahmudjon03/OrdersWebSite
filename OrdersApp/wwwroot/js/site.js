@@ -212,6 +212,13 @@ function toggleCommentInput(index) {
     }
 }
 
+let selectedProductId = null;
+function toggleTrash(productId) {
+    selectedProductId = productId;
+    const modal = new bootstrap.Modal(document.getElementById('confirmDeleteModal'));
+    modal.show();
+}
+
 const toastEl = document.getElementById('cartToast');
 const toast = new bootstrap.Toast(toastEl, {
     delay: 1000, // Reduced to 1 second
