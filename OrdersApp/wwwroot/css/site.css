@@ -86,9 +86,29 @@ header {
 
 
 .butn_zagal {
-    height: 18%;
-    width:25%;
-    background-color: #009fcb;
+    height: 35px;
+    width: 35%;
+    background-color: #009fcb; /* Keep original background color */
+    color: #ffffff; 
+    padding:5px;    
+    border: none; /* Remove default border */
+    border-radius: 8px;
+    font-size: 14px; 
+    text-align: center; /* Center text */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+/* Hover effect */
+.butn_zagal:hover {
+    background-color: #007a99; /* Slightly darker shade for hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Active/clicked effect */
+.butn_zagal:active {
+    transform: translateY(0); /* Reset lift */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); /* Reduced shadow */
 }
 
 
@@ -404,11 +424,11 @@ tbody tr td:last-child {
             .sidebar ul li a {
                 color: black;
                 text-decoration: none;
-                font-size: 20px;
+                font-size: 19px;
                 display: flex;
-                align-content: center;
-                justify-content:center;
-               padding:10px;
+                align-content: start;
+                justify-content:start;
+                padding:10px;
             }
 
 
@@ -564,9 +584,25 @@ tbody tr td:last-child {
     padding:5px;
     width:35%;
 }
-.sidebar .lili a.active {
-    background-color: #f0f0f0;
-    color: #333;
-    font-weight: bold;
+.lili a{
     width:100%;
+    align-items:start;
+    padding:0;
+    text-align:start;
+   }
+.sidebar .active {
+    background-color: #f0f0f0; /* Light gray background */
+    font-weight: bold; /* Bold text */
+    border-left: 4px solid #007bff; /* Blue left border */
 }
+
+.empticart{
+    width:80%;
+    height: 80%;
+    margin-left:10%;
+    cursor: pointer; /* Hand cursor on hover */
+    }
+
+    .empticart:hover {
+        opacity: 0.8; /* Slight fade on hover for feedback */
+    }

@@ -11,6 +11,8 @@ namespace OrdersApp.Controllers
     {
         public IActionResult Index()
         {
+
+            ViewBag.ActiveCategory = null;
             var basket = HttpContext.Session.GetObjectFromJson<List<CartItem>>("Basket") ?? new List<CartItem>();
             return View(basket);
         }

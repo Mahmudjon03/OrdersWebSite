@@ -76,55 +76,56 @@
 
 
                 </tr>
-            
+
             }
 
 
         </tbody>
     </table>
 
-    <div class="bottomdiv">
-        <div class="div_itog">
-            <h6 class="h6_div_itog">Итого товаров: <span id="total-amount-2">@total</span></h6>
-            <h6>Скидка: <span id="discount">0</span></h6>
-            <h4>Итого: <span id="amount"></span></h4>
-        </div>
+    @if (Model.Count != 0)
+    {
 
-        <button type="button" class="butn" onclick="openModal()">Оформить заказ</button>
+        <div class="bottomdiv">
+            <div class="div_itog">
+                <h6 class="h6_div_itog">Итого товаров: <span id="total-amount-2">@total</span></h6>
+                <h6>Скидка: <span id="discount">0</span></h6>
+                <h4>Итого: <span id="amount"></span></h4>
+            </div>
 
-        <div id="myModal" class="modal fade" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="myModalLabel">Оформление заказа</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
-                    </div>
-                    <div class="modal-body">
-                        @if (Model.Count == 0)
-                        {
-                            <h2 style="color:#979494; margin:20px;">
-                                Корзина пуста!
-                            </h2>
-                        }
-                        else
-                        {
+            <button type="button" class="butn" onclick="openModal()">Оформить заказ</button>
+
+
+            <div id="myModal" class="modal fade" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="myModalLabel">Оформление заказа</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                        </div>
+                        <div class="modal-body">
                             <p> Вы уверены, что хотите оформить заказ?</p>
-                        }
-                    </div>
-                    <div class="modal-footer">
-                        @if (Model.Count != 0)
-                        {
-                            <button class="btn btn-success btn-sm" type="submit">Да, оформить</button>
-                        }
-                        <button class="btn btn-danger btn-sm" type="button" data-bs-dismiss="modal">Отмена</button>
+                        </div>
+                        <div class="modal-footer">
+                            @if (Model.Count != 0)
+                            {
+                                <button class="btn btn-success" type="submit">Да, оформить</button>
+                            }
+                            <button class="btn btn-danger" type="button" data-bs-dismiss="modal">Отмена</button>
+                        </div>
                     </div>
                 </div>
             </div>
+
         </div>
 
-    </div>
-
-
+    }
+    else
+    {
+        <a asp-area="" asp-controller="Orders" asp-action="OrderFood" asp-route-category="33">
+            <img src="~/image/cartplus.jpg" class="empticart" alt="Open Doner Category" />
+        </a>
+    }
 
     <div class="modal fade" id="confirmDeleteModal" tabindex="-1" aria-labelledby="confirmDeleteLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -136,10 +137,10 @@
                 <div class="modal-body">
                     Вы уверены, что хотите удалить <span class="name-prod"></span>?
                 </div>
-             
+
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Нет</button>
-                    <button type="button" class="btn btn-danger" id="confirmDeleteBtn">Да, удалить</button>
+                    <button type="button" class="btn btn-danger"    id="confirmDeleteBtn">Да, удалить</button>
                 </div>
             </div>
         </div>
@@ -278,7 +279,7 @@
             .then(data => {
                 if (data.success) {
                     textarea.value = data.comment; // Update with server-corrected comment (if any)
-                     
+
                 } else {
                     alert('❌ Не удалось сохранить комментарий.');
                 }

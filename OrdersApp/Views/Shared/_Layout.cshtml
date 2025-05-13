@@ -37,11 +37,27 @@
                 <!-- Сайдбар меню -->
                 <div class="sidebar d-sm-none" id="sidebar">
                     <ul>
-                        <li class="lili"><a asp-area="" asp-controller="Orders" asp-action="OrderFood" asp-route-category="33" onclick="setActiveCategory(this)">🥙 Донер</a></li>
-                        <li class="lili"><a asp-area="" asp-controller="Orders" asp-action="OrderFood" asp-route-category="39" onclick="setActiveCategory(this)">🌮 Тантуни</a></li>
-                        <li class="lili"><a asp-area="" asp-controller="Orders" asp-action="OrderFood" asp-route-category="40" onclick="setActiveCategory(this)">🍹 Нушокихои хунук</a></li>
-                        <li class="lili"><a asp-area="" asp-controller="Orders" asp-action="OrderFood" asp-route-category="44" onclick="setActiveCategory(this)">🍵 Нушокихои гарм</a></li>
-                        <li class="lili"><a asp-area="" asp-controller="Orders" asp-action="OrderFood" asp-route-category="45" onclick="setActiveCategory(this)">🍱 Комбо</a></li>
+                        <li class="lili">
+                            <a asp-area="" asp-controller="Orders" asp-action="OrderFood" asp-route-category="33"
+                               class="@(ViewBag.ActiveCategory == 33 ? "active" : "")" onclick="setActiveCategory(this)">🥙 Донер</a>
+                        </li>
+                        <li class="lili">
+                            <a asp-area="" asp-controller="Orders" asp-action="OrderFood" asp-route-category="39"
+                               class="@(ViewBag.ActiveCategory == 39 ? "active" : "")" onclick="setActiveCategory(this)">🌮 Тантуни</a>
+                        </li>
+                        <li class="lili">
+                            <a asp-area="" asp-controller="Orders" asp-action="OrderFood" asp-route-category="40"
+                               class="@(ViewBag.ActiveCategory == 40 ? "active" : "")" onclick="setActiveCategory(this)">🍹 Нушокихои хунук</a>
+                        </li>
+                        <li class="lili">
+                            <a asp-area="" asp-controller="Orders" asp-action="OrderFood" asp-route-category="44"
+                               class="@(ViewBag.ActiveCategory == 44 ? "active" : "")" onclick="setActiveCategory(this)">🍵 Нушокихои гарм</a>
+                        </li>
+                        <li class="lili">
+                            <a asp-area="" asp-controller="Orders" asp-action="OrderFood" asp-route-category="45"
+                               class="@(ViewBag.ActiveCategory == 45 ? "active" : "")" onclick="setActiveCategory(this)">🍱 Комбо</a>
+                        </li>
+                     
                     </ul>
                 </div>
 

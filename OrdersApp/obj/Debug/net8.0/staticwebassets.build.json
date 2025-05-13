@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "+udHYXPc7UhWW4R+UCFc2HZbeE8BwF/9jamt4FTMNq8=",
+  "Hash": "6MuMM+XBqXJUUQF+6NLh+Vznz/jEnjGDJr4UNeyKDYs=",
   "Source": "OrdersApp",
   "BasePath": "_content/OrdersApp",
   "Mode": "Default",
@@ -167,6 +167,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\image\\Ayran 200ml77.jpeg"
+    },
+    {
+      "Identity": "C:\\Users\\User\\Desktop\\MyFinApp\\OrdersApp\\wwwroot\\image\\cartplus.jpg",
+      "SourceId": "OrdersApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\MyFinApp\\OrdersApp\\wwwroot\\",
+      "BasePath": "_content/OrdersApp",
+      "RelativePath": "image/cartplus.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\image\\cartplus.jpg"
     },
     {
       "Identity": "C:\\Users\\User\\Desktop\\MyFinApp\\OrdersApp\\wwwroot\\image\\ccole.jpg",

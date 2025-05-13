@@ -228,26 +228,13 @@ function showCartToast() {
     toast.show();
 }
 
+
 function setActiveCategory(element) {
-    // Удаляем класс active у всех элементов
-    document.querySelectorAll('#sidebar .lili a').forEach(item => {
-        item.classList.remove('active');
+    // Remove 'active' class from all sidebar links
+    document.querySelectorAll('.sidebar a').forEach(link => {
+        link.classList.remove('active');
     });
 
-    // Добавляем класс active к выбранному элементу
+    // Add 'active' class to the clicked link
     element.classList.add('active');
-
-    // Сохраняем выбранную категорию в localStorage
-    localStorage.setItem('lastActiveCategory', element.getAttribute('href'));
 }
-
-// При загрузке страницы проверяем сохраненную категорию
-document.addEventListener('DOMContentLoaded', function () {
-    const lastActiveCategory = localStorage.getItem('lastActiveCategory');
-    if (lastActiveCategory) {
-        const activeElement = document.querySelector(`#sidebar .lili a[href="${lastActiveCategory}"]`);
-        if (activeElement) {
-            activeElement.classList.add('active');
-        }
-    }
-});
